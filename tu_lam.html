@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lavie Studio</title>
+    <link rel="stylesheet" href="tulam.css">
+    <script src="https://kit.fontawesome.com/f37f5bf160.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/game-icon-png/games-icon-png-4.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a href="https://laviele.free.nf/lavie-studio">
+        <img src="Capture (1).png" alt="icon" style="height:100px;width:100px;">
+      </a>
+      <ul class="nav">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#browse">Browse</a>
+        </li>
+        <li>
+          <a href="#tournament">Tournament</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+      </ul>
+      <div class="action">
+        <div class="searchBx">
+          <a href="#"></a>
+          <i class='bx bx-search-alt-2'></i>
+          <input type="text" id="searchbar" placeholder="Search games...">
+        </div>
+      </div>
+      <div class="shop">
+        <ul class="cart">
+          <li>
+            <a href="#">
+              <i class='bx bx-cart-add'></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="toggleMenu" onclick="toggleMenu();"></div>
+    </header>
+    <!-- home banner -->
+    <div class="banner " id="home">
+      <div class="bg">
+        <div class="content">
+          <h2>Lavie <br> Studio </h2>
+          <p>Beyond Reality, Beyond Gaming.</p>
+          <a href="#" class="btn">Join Now</a>
+        </div>
+        <img src="pngtree-fortnite-ultimate-team-mod-apk-picture-image_2772892.png">
+      </div>
+    </div>
+    <!-- about -->
+    <div class="about animeX" id="about">
+      <div class="contentBx">
+        <h2>About</h2>
+        <p>Lavie Studio is the ultimate destination for playing, discussing, and creating games. </p>
+        <a href="#" style="float:right;">Read more</a>
+      </div>
+      <img src="cyberpunk-gaming-controller-gamepad-joystick-illustration_691560-5812-removebg-preview.png">
+    </div>
+    <!-- games -->
+    <div class="games animeX" id="browse">
+      <h2>Popular Games</h2>
+      <ul class="indicator">
+        <li class="list active" data-filter="all">All</li>
+        <li class="list" data-filter="pc">PC Games</li>
+        <li class="list" data-filter="mobile">Mobile Games</li>
+        <li class="list" data-filter="ps">PlayStation Games</li>
+      </ul>
+      <div class="filter-condition">
+        <span>View As </span>
+        <select name="" id="select">
+          <option value="default"> Default</option>
+          <option value="lowToHigh"> Lowest to highest</option>
+          <option value="highToLow"> Highest to lowest</option>
+        </select>
+      </div>
+      
+      <div class="cardBx">
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d36ee3121424199.60c5d6860b34d.jpg">
+          <div class="content">
+            <h4>Battlefield 2042</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">990.000đ</span>
+                <span>158.500đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/590ce51fb614aada19630d6b8fc2ffb3.png">
+          <div class="content">
+            <h4>Ready or Not</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">310.000đ</span>
+                <span>248.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://m.media-amazon.com/images/I/71bzuO5hdvL._AC_UF1000,1000_QL80_.jpg">
+          <div class="content">
+            <h4>Red Dead <br>Redemption II </h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">310.000đ</span>
+                <span>248.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://www.streetfighter.com/6/assets/images/product/edition_Ultimate.jpg">
+          <div class="content">
+            <h4>Street Fighter 6: Ultimate Edition</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">1.322.000đ</span>
+                <span>872.500đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/fbad60ab72af63798c1dff9c/spotlight_image_english.jpg?t=1698968924">
+          <div class="content">
+            <h4>Attack on Titan 2: Final Battle</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>590.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://upload.wikimedia.org/wikipedia/tr/b/bb/Dark_souls_3_cover_art.jpg">
+          <div class="content">
+            <h4>Dark Souls 3</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">970.000đ</span>
+                <span>485.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://i.pinimg.com/736x/d0/17/55/d01755c0ce0f569ba3be83a7017cabab.jpg">
+          <div class="content">
+            <h4>Assassin Creed's Mirage</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">1.250.000đ</span>
+                <span>630.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://cdn.akamai.steamstatic.com/steam/spotlights/79c20a69cc3f88685f33b900/spotlight_image_english.jpg?t=1698787447">
+          <div class="content">
+            <h4>Crusader King III</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>250.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://cdn.akamai.steamstatic.com/steam/spotlights/c3095cfc75b03ad7d2211de1/spotlight_image_english.jpg?t=1698969344">
+          <div class="content">
+            <h4>Stranded: Alien Dawn</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>322.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://preview.redd.it/fan-art-poster-for-alan-wake-2-by-me-v0-hqbzqwylucxb1.jpg?width=2526&format=pjpg&auto=webp&s=1cb9d31109c20ef5c438ecf1b115a483cc1543b2">
+          <div class="content">
+            <h4>Alan Wake 2</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">1.150.000đ</span>
+                <span>820.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://store-images.s-microsoft.com/image/apps.27418.13768370188591668.302c14c1-c563-4b96-9413-8dcd386e8806.35943a0f-ac2d-4952-b31a-6c3aad7db3aa?w=400&h=600">
+          <div class="content">
+            <h4>Diablo IV</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">1.599.000đ</span>
+                <span>990.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/d/df/Resident_Evil_4_remake_cover_art.jpg">
+          <div class="content">
+            <h4>Resident Evil 4</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>857.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://preview.redd.it/azasf35u0sr91.jpg?width=4961&format=pjpg&auto=webp&s=18e391a7364a2cdf423523b879b4c4e591de8149">
+          <div class="content">
+            <h4>Dead Space</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>495.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://picfiles.alphacoders.com/145/thumb-145318.jpg">
+          <div class="content">
+            <h4>Counter Strike: Global Offensive</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://www.posters.eu/media/catalog/product/cache/cb3faf85ecb1e071fdba48f981c86454/e/l/elden-ring-battlefield-of-the-fallen-poster-61x91.5cm.jpg">
+          <div class="content">
+            <h4>Elden Ring</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>898.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="pc" data-price="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/c/c6/Wo_Long_Fallen_Dynasty_cover.jpeg">
+          <div class="content">
+            <h4>Wo Long: Fallen Dynasty</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span style="text-decoration: line-through;">1.050.000đ</span>
+                <span>785.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://upload.wikimedia.org/wikipedia/vi/0/0a/Genshin_Impact_cover.jpg">
+          <div class="content">
+            <h4>Genshin Impact</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTg4MDM4YjMtZTVmOS00ZDMxLWJlZDMtMDI5ZTM2ZTY3OWUxXkEyXkFqcGdeQXVyMjQ4Mzc4ODQ@._V1_.jpg">
+          <div class="content">
+            <h4>Sky: Children of the Light</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://i.ebayimg.com/images/g/0PUAAOSwqZ9gsUHs/s-l1200.jpg">
+          <div class="content">
+            <h4>Among Us</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://myhotposters.com/cdn/shop/products/mL3656_1024x1024.jpg?v=1571445734">
+          <div class="content">
+            <h4>Call of Duty Mobile</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1s08.jpg">
+          <div class="content">
+            <h4>Wild Rift</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://giantbrain.co.uk/wp-content/uploads/2022/10/Screenshot_20221026-173110_Easy-Resize.com_.jpg">
+          <div class="content">
+            <h4>Marvel Snap</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://assetsio.reedpopcdn.com/co2pwy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp">
+          <div class="content">
+            <h4>Diablo Immortal</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjUwMDhiY2EtNWVkMy00NDU0LTliNmYtMTRhYTViZjE5YWQzXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_.jpg">
+          <div class="content">
+            <h4>Raid: Shadow Legends</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://m.media-amazon.com/images/M/MV5BMzllN2IwYzEtODZhNC00ODRkLWE2ZmUtODdiOTU2YjZlZTk0XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_UY1200_CR85,0,630,1200_AL_.jpg">
+          <div class="content">
+            <h4>Subway Surfers</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://m.media-amazon.com/images/M/MV5BZTZlMWQxMDMtMmIyYi00YTk5LWExNjktOTU2NDA1Zjc2OGI0XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg">
+          <div class="content">
+            <h4>Clash Of Clans</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/40eee067-5ae5-4693-9b50-ad9789c5e06f/dewtwd3-ebee7b9b-0d50-49ef-abae-ede546693bfd.jpg/v1/fill/w_1280,h_1921,q_75,strp/honkai_impact_3rd_poster_design_by_nnrarchive_dewtwd3-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMSIsInBhdGgiOiJcL2ZcLzQwZWVlMDY3LTVhZTUtNDY5My05YjUwLWFkOTc4OWM1ZTA2ZlwvZGV3dHdkMy1lYmVlN2I5Yi0wZDUwLTQ5ZWYtYWJhZS1lZGU1NDY2OTNiZmQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.j0pUQbQprJ_A8jI-ubGiP8RCAd26IR15HK70vsuGzAc">
+          <div class="content">
+            <h4>Honkai Impact 3</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="mobile" data-price="">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTM4MTc2ZDgtY2I2Zi00NmQ0LTg3ZTUtNzE3NGM0ZDU3MmZmXkEyXkFqcGdeQXVyNjc2NjYwOTA@._V1_.jpg">
+          <div class="content">
+            <h4>Arena Of Valor</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>Free</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://m.media-amazon.com/images/M/MV5BMDUzZjQxMWEtODc5NC00MTA2LThhMGItMjRkY2Y2OGU1NDg3XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg">
+          <div class="content">
+            <h4>Demon's Souls (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>1350.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://cdn.europosters.eu/image/1300/posters/assassin-s-creed-valhalla-standard-edition-i97796.jpg">
+          <div class="content">
+            <h4>Assassin's Creed: Valhalla (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>999.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/PRfYtTZQsuj3ALrBXGL8MjAH.jpg">
+          <div class="content">
+            <h4>Spider-Man: Miles Morales (PS4-PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>1280.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://m.media-amazon.com/images/I/71MLMRhVSIL._AC_UF1000,1000_QL80_.jpg">
+          <div class="content">
+            <h4>Mortal Kombat 11 (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>790.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/c16gs6a7lbAYzPf7ZTikbH1c.png">
+          <div class="content">
+            <h4>Ghost of Tsushima: Director's Cut (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>1250.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/1710/86flTX6TLYP7MABrMUt3An6m.png">
+          <div class="content">
+            <h4>Devil May Cry 5: Special Edition (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>890.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg">
+          <div class="content">
+            <h4>Marvel's Spider-Man 2 (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>1799.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://picfiles.alphacoders.com/556/thumb-556163.jpg">
+          <div class="content">
+            <h4>God of War: Ragnarok (PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>1799.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://myhotposters.com/cdn/shop/products/mL4518_1024x1024.jpg?v=1594302628">
+          <div class="content">
+            <h4>The Last Of Us: Part II (PS4-PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>880.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://myhotposters.com/cdn/shop/products/mL4139_1024x1024.jpg?v=1577740598">
+          <div class="content">
+            <h4>Dragonball Z Kakarot (PS4)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>900.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06904514-8244-4a62-bc3c-505467cab7d4/ddm1ioq-9cf26cc8-ac51-4d69-935c-358b1b14b060.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2OTA0NTE0LTgyNDQtNGE2Mi1iYzNjLTUwNTQ2N2NhYjdkNFwvZGRtMWlvcS05Y2YyNmNjOC1hYzUxLTRkNjktOTM1Yy0zNThiMWIxNGIwNjAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pMM7skW8OroHOv-_yqRU31K9QnV42ZsMrglmaQAUt5M">
+          <div class="content">
+            <h4>Resident Evil 3 Remake (PS4-PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>900.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-item="ps" data-price="">
+          <img src="https://myhotposters.com/cdn/shop/products/mL3850_1024x1024.jpg?v=1572970180">
+          <div class="content">
+            <h4>Death Stranding (PS4-PS5)</h4>
+            <div class="progress-line"><span></span></div>
+
+            <div class="info">
+              <p>Price <br>
+                <span>780.000đ</span>
+              </p>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--tournament-->
+    <div class="tournaments animeX" id="tournament">
+      <h2>Live Tournaments</h2>
+      <div class="boxBx">
+        <div class="box">
+          <img src="https://www.esportsbets.com/wp-content/uploads/2022/12/csgo-tournaments.jpg">
+          <div class="content">
+            <h4>
+              <span>34</span> Matches in progress...
+            </h4>
+            <p>You're a champion!</p>
+            <div class="btn">
+              <a href="#" class="watch">Watch</a>
+              <a href="#" class="join">Join</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="https://images.blz-contentstack.com/v3/assets/blta7b34f1f894a2422/blt7fb130186323a5ab/6439a956a3e9c24dffdfd2fe/CDL_2023_Champs_BG_LOGO_blog_1920x1080.png">
+          <div class="content">
+            <h4>
+              <span>28</span> Matches in progress...
+            </h4>
+            <p>Winners in life don’t always win; they just don’t give up.</p>
+            <div class="btn">
+              <a href="#" class="watch">Watch</a>
+              <a href="#" class="join">Join</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="https://i.ytimg.com/vi/u1T5rhNj0DM/maxresdefault.jpg">
+          <div class="content">
+            <h4>
+              <span>18</span> Matches in progress...
+            </h4>
+            <p>Easy peasy, lemon squeezy!</p>
+            <div class="btn">
+              <a href="#" class="watch">Watch</a>
+              <a href="#" class="join">Join</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="https://d1af7m13b2f34i.cloudfront.net/media/league-of-legends-worlds-2023-sportstiger-1673357714695-original.jpg">
+          <div class="content">
+            <h4>
+              <span>10</span> Matches in progress...
+            </h4>
+            <p>Play like there's no tomorrow.</p>
+            <div class="btn">
+              <a href="#" class="watch">Watch</a>
+              <a href="#" class="join">Join</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="https://s.yimg.com/ny/api/res/1.2/rfEzR9CmbKRc6Nh1wttQHA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://s.yimg.com/os/creatr-uploaded-images/2023-05/b697ac60-ece6-11ed-9dde-a8f9976fd66b">
+          <div class="content">
+            <h4>
+              <span>5</span> Matches in progress...
+            </h4>
+            <p>Game like a champion!</p>
+            <div class="btn">
+              <a href="#" class="watch">Watch</a>
+              <a href="#" class="join">Join</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="https://cdn-wp.thesportsrush.com/2022/04/9e14236f-valorant-2023-esports-updates.jpg?w=3840&q=60">
+          <div class="content">
+            <h4>
+              <span>40</span> Matches in progress...
+            </h4>
+            <p>Winning never gets old.</p>
+            <div class="btn">
+              <a href="#" class="watch">Watch</a>
+              <a href="#" class="join">Join</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--contact-->
+      <div class="contact animeX" id="contact">
+        <img src="https://www.blogtyrant.com/wp-content/uploads/2019/12/best-contact-us-pages-2.png">
+        <div class="form">
+          <h1>Contact Us</h1>
+          <div class="inputBx">
+            <p>Enter your name</p>
+            <input type="text" placeholder="Full Name">
+          </div>
+          <div class="inputBx">
+            <p>Enter you email</p>
+            <input type="text" placeholder="Email">
+          </div>
+          <div class="inputBx">
+            <p>Message</p>
+            <textarea placeholder="Type here..."></textarea>
+          </div>
+          <div class="inputBx">
+            <input type="submit" name="Submit">
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <footer>
+        <div class="info">
+          <a href="#" class="logo">Lavie Studio</a>
+          <p>
+            <i class='bx bx-copyright'></i> 2023 All Rights Reserved
+          </p>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-linkedin-in icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-google-plus-g icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="topbtn">
+          <button onclick="topFunction()" id="myBtn">
+            <i class='bx bxs-to-top'></i>
+          </button>
+        </div>
+      </footer>
+      <script src="tulam.js"></script>
+  </body>
+</html>
