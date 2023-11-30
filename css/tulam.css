@@ -98,7 +98,8 @@ header .action .searchBx input {
 	color: #182628;
 	background: #93e4c1;
 }
-header .shop button{
+header .shop button,
+header .shop #cart{
 	background-color: transparent;
     background-repeat: no-repeat;
     border: none;
@@ -106,11 +107,17 @@ header .shop button{
     overflow: hidden;
     outline: none;
 	font-size:1.2em;
-} 
-header .shop button:hover,
-header .shop #cart:hover{
 	color: #f2f2f2;
+} 
+header .shop button:hover{
+	color: #182628;
 	border-radius: 5px;
+}
+header .shop .clear-cart{
+	margin:10px;
+	font-size: 1em;
+	justify-content: center;
+	align-items: center;
 }
 /* home banner */
 .banner {
