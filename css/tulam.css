@@ -98,16 +98,20 @@ header .action .searchBx input {
 	color: #182628;
 	background: #93e4c1;
 }
-
-.bx-cart-add {
-	font-size: 23px;
-	color: #dc2f2f;
-	text-shadow: 1px 1px 1px #7c73e6;
-	justify-content: center;
-	align-items: center;
-	margin: 10px;
+header .shop button{
+	background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+	font-size:1.2em;
+} 
+header .shop button:hover,
+header .shop #cart:hover{
+	color: #f2f2f2;
+	border-radius: 5px;
 }
-
 /* home banner */
 .banner {
 	position: relative;
@@ -370,7 +374,33 @@ header .action .searchBx input {
 .games .cardBx .card.hide {
 	display: none;
 }
-
+.games .cardBx .card .info button{
+	display: inline-block;
+	padding: 10px 20px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	margin:5px;
+	height:auto;
+	width: auto;
+	color: #f2f2f2;
+	background: none;
+	border: 1.5px solid #000;
+	border-radius: 10px;
+	box-shadow: 5px 5px 0px #000;
+	transition: all 0.3s ease;
+}
+.games .cardBx .card .info button:hover{
+	background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+	color: #f2f2f2;
+	border: 3px solid #005792;
+	box-shadow: 0 0 10px #347474;
+}
+.games .cardBx .card .info button:active{
+	background: linear-gradient(109.6deg, rgb(255, 230, 109) 11.2%, rgb(87, 232, 107) 100.2%);
+	box-shadow: none;
+	transform: translateY(4px);
+}
 /*tournament*/
 .tournaments {
 	padding: 0px;
