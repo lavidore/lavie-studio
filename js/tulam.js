@@ -119,3 +119,9 @@ for(let i = 0; i < addButtons.length; i++) {
     cart.innerText = parseInt(item, 10) + 1;
   }
 }
+
+// clear cart 
+document.querySelector('.clear-cart').addEventListener('click', function() {
+  document.getElementById('cart').textContent = '0';
+});
+
