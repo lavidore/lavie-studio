@@ -108,3 +108,14 @@ function sortCardsByPrice(ascending) {
     cardBx.appendChild(card);
   });
 }
+
+// add to cart 
+const cart = document.getElementById("cart");
+const addButtons = document.getElementsByClassName('add');
+
+for(let i = 0; i < addButtons.length; i++) {
+  addButtons[i].onclick = function add_item() {
+    const item = cart.innerText;
+    cart.innerText = parseInt(item, 10) + 1;
+  }
+}
