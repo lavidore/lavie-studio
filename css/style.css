@@ -129,6 +129,7 @@ header .shop .clear-cart{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin:100px auto;
 }
 
 .banner .bg {
@@ -142,7 +143,9 @@ header .shop .clear-cart{
 
 .banner .bg .content {
 	width: 50%;
-	height: 100%;
+	position: absolute;
+	top:40%;
+  	left: 40px;
 }
 
 .banner .bg .content h2 {
@@ -177,7 +180,11 @@ header .shop .clear-cart{
 }
 
 .banner .bg img {
-	max-width: 600px;
+
+	height: 100%;
+ 	max-width: 100%;
+	object-fit: contain;
+	
 }
 /*slideshow*/
 .mySlides {
@@ -241,7 +248,11 @@ header .shop .clear-cart{
 	text-align: center;
   }
   /* The dots/bullets/indicators */
- .dot {
+  .dot-container{
+	margin:50px;
+    text-align: center;
+  }
+ .dot-container .dot {
 	cursor: pointer;
 	height: 9px;
 	width: 15px;
@@ -249,9 +260,9 @@ header .shop .clear-cart{
 	background-color: #999999;
 	border-radius: 2px;
 	display: inline-block;
-	transition: background-color 0.6s ease;
+	transition: #347474 0.6s ease;
   }
-.dot.active{
+  .dot-container .dot.active{
 	background:#182628;
 }
   /* Fading animation */
@@ -859,7 +870,7 @@ footer .topbtn #myBtn:hover {
 		bottom: 0;
 		background: #3b945e;
 		display: none;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		flex-direction: column;
 		z-index: 1000;
@@ -877,10 +888,18 @@ footer .topbtn #myBtn:hover {
 		font-size: 24px;
 		margin: 10px 0;
 	}
-
+	header.sticky{
+		max-width: 100%;
+		height:auto;
+	}
+	header .shop .col{
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+	}
 	.toggleMenu {
 		position: relative;
-		width: 30px;
+		width: 100%;
 		height: 30px;
 		background: url("https://static.vecteezy.com/system/resources/previews/009/362/781/original/app-menu-icon-sign-symbol-design-free-png.png");
 		background-position: center;
@@ -902,15 +921,21 @@ footer .topbtn #myBtn:hover {
 	}
 
 	.banner .bg .content {
-		width: 100%;
-		height: 100%;
+		position:relative;
+		max-width: 50%;
 		background: rgb(27 33 65 / 50%);
 		padding: 20px;
 		z-index: 1;
 		border-radius: 10px;
+		left:0;
 	}
-
-	.about {
+	.games .cardBx .card,
+	.tournaments .boxBx .box
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.about, .tournaments, .games {
 		flex-direction: column;
 	}
 
@@ -957,5 +982,8 @@ footer .topbtn #myBtn:hover {
 	.slideshow-container .next,
 	.slideshow-container .text {
 	  font-size: 10px;
+	}
+	.slideshow-container .mySlides img{
+		max-width: 100%;
 	}
 }
