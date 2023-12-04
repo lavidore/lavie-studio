@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Lavie Studio</title>
-    <link rel="stylesheet" href="css/tulam.css">
-    <script src="https://kit.fontawesome.com/f37f5bf160.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavie Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f37f5bf160.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- header -->
@@ -60,14 +60,63 @@
         <img src="img/pngtree-fortnite-ultimate-team-mod-apk-picture-image_2772892.png">
       </div>
     </div>
-    <!-- about -->
-    <div class="about animeX" id="about">
-      <div class="contentBx">
-        <h2>About</h2>
-        <p>Lavie Studio is the ultimate destination for playing, discussing, and creating games. </p>
-        <a href="#" style="float:right;">Read more</a>
+    <!-- slideshow -->
+    <div class="slideshow-container animeX">
+      <div class="mySlides fade">
+        <img src="img/alanwake2.jpeg">
+        <div class="text">Alan Wake 2</div>
       </div>
-      <img src="img/cyberpunk-gaming-controller-gamepad-joystick-illustration_691560-5812-removebg-preview.png">
+      <div class="mySlides fade">
+        <img src="img/destiny2.jpg">
+        <div class="text">Destiny 2</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/mw3.png">
+        <div class="text">Call of Duty: Modern Warfare 3</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/horizon.jpg">
+        <div class="text">Horizon Zero Dawn: Completed Edition</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/cyberpunk.jpeg">
+        <div class="text">Cyber Punk 2077</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/warthunder.jpg">
+        <div class="text">War Thunder</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/cs2.jpeg">
+        <div class="text">Counter Strike 2</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/deadisland2.jpg">
+        <div class="text">Dead Island 2</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/witcher3.jpg">
+        <div class="text">The Witcher 3: Wild Hunt</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/wukong.jpg">
+        <div class="text">Black Myth Wukong</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
     </div>
     <!-- games -->
     <div class="games animeX" id="browse">
@@ -79,21 +128,27 @@
         <li class="list" data-filter="ps">PlayStation Games</li>
       </ul>
       <div class="filter-condition">
-        <span>View As </span>
+        <span>Sort by: </span>
         <select name="" id="select">
           <option value="default"> Default</option>
-          <option value="lowToHigh"> Lowest to highest</option>
-          <option value="highToLow"> Highest to lowest</option>
+          <option value="lowToHigh"> Price: Lowest to highest</option>
+          <option value="highToLow"> Price: Highest to lowest</option>
+          <option value="aToZ"> Alphabetical order: A - Z</option>
+          <option value="zToA"> Alphabetical order: Z - A</option>
         </select>
       </div>
       
       <div class="cardBx">
         <div class="card" data-item="pc" data-price="">
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d36ee3121424199.60c5d6860b34d.jpg">
+          <div class="container">
+            <a href="#">
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d36ee3121424199.60c5d6860b34d.jpg" class="main">
+              <img src="https://taskandpurpose.com/uploads/2021/06/14/battlefield-screenshot-e1623689607108.png?auto=webp&width=1440&height=810.26774330642" class="hov">
+            </a>
+          </div>
           <div class="content">
             <h4>Battlefield 2042</h4>
             <div class="progress-line"><span></span></div>
-
             <div class="info">
               <p>Price <br>
                 <span style="text-decoration: line-through;">990.000đ</span>
@@ -104,7 +159,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/590ce51fb614aada19630d6b8fc2ffb3.png">
+          <div class="container">
+            <a href="#">
+              <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/590ce51fb614aada19630d6b8fc2ffb3.png" class="main">
+              <img src="https://m.media-amazon.com/images/M/MV5BN2YzYmRmMzMtMTEyZS00NWI4LWE3MTgtOTA3ZTM3MTlkOTVhXkEyXkFqcGdeQXVyMjU2NDgzODU@._V1_.jpg" class="hov">              
+            </a>
+          </div>
           <div class="content">
             <h4>Ready or Not</h4>
             <div class="progress-line"><span></span></div>
@@ -119,7 +179,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://m.media-amazon.com/images/I/71bzuO5hdvL._AC_UF1000,1000_QL80_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/I/71bzuO5hdvL._AC_UF1000,1000_QL80_.jpg">
+              <img class="hov" src="https://cdn.vox-cdn.com/thumbor/oUTweoJUOSkimvnh0Eh6csInIzU=/0x0:1920x1080/1400x788/filters:focal(960x540:961x541)/cdn.vox-cdn.com/uploads/chorus_asset/file/19358225/Red_Dead_Redemption_2_20181022100055.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Red Dead <br>Redemption II </h4>
             <div class="progress-line"><span></span></div>
@@ -134,7 +199,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://www.streetfighter.com/6/assets/images/product/edition_Ultimate.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://www.streetfighter.com/6/assets/images/product/edition_Ultimate.jpg">
+              <img class="hov" src="https://www.videogameschronicle.com/files/2022/06/SF.00_01_30_21.Still001.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Street Fighter 6: Ultimate Edition</h4>
             <div class="progress-line"><span></span></div>
@@ -149,7 +219,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/fbad60ab72af63798c1dff9c/spotlight_image_english.jpg?t=1698968924">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/fbad60ab72af63798c1dff9c/spotlight_image_english.jpg?t=1698968924">
+              <img class="hov" src="https://www.gamespace.com/wp-content/uploads/2019/07/Attack-on-Titan-2-Final-Batttle-Review-780x439.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Attack on Titan 2: Final Battle</h4>
             <div class="progress-line"><span></span></div>
@@ -163,7 +238,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://upload.wikimedia.org/wikipedia/tr/b/bb/Dark_souls_3_cover_art.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://upload.wikimedia.org/wikipedia/tr/b/bb/Dark_souls_3_cover_art.jpg">
+              <img class="hov" src="https://cdn.mos.cms.futurecdn.net/nVYj8pKWB2YsWduEBvfytC.png">
+            </a>
+          </div>
           <div class="content">
             <h4>Dark Souls 3</h4>
             <div class="progress-line"><span></span></div>
@@ -178,7 +258,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://i.pinimg.com/736x/d0/17/55/d01755c0ce0f569ba3be83a7017cabab.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://i.pinimg.com/736x/d0/17/55/d01755c0ce0f569ba3be83a7017cabab.jpg">
+              <img class="hov" src="https://www.gameinformer.com/sites/default/files/styles/full/public/2023/06/12/269549ea/acmirage_01.jpg">
+            </a> 
+          </div>
           <div class="content">
             <h4>Assassin Creed's Mirage</h4>
             <div class="progress-line"><span></span></div>
@@ -193,7 +278,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://cdn.akamai.steamstatic.com/steam/spotlights/79c20a69cc3f88685f33b900/spotlight_image_english.jpg?t=1698787447">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://cdn.akamai.steamstatic.com/steam/spotlights/79c20a69cc3f88685f33b900/spotlight_image_english.jpg?t=1698787447">
+              <img class="hov" src="https://cdn.mos.cms.futurecdn.net/6Fqk7SvfRk5R25AZXCBMiD.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Crusader King III</h4>
             <div class="progress-line"><span></span></div>
@@ -207,7 +297,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://cdn.akamai.steamstatic.com/steam/spotlights/c3095cfc75b03ad7d2211de1/spotlight_image_english.jpg?t=1698969344">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://cdn.akamai.steamstatic.com/steam/spotlights/c3095cfc75b03ad7d2211de1/spotlight_image_english.jpg?t=1698969344">
+              <img class="hov" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1324130/ss_cf60903c8f1034ef1711ed2df25971330146394e.1920x1080.jpg?t=1699365820">
+            </a>
+          </div>
           <div class="content">
             <h4>Stranded: Alien Dawn</h4>
             <div class="progress-line"><span></span></div>
@@ -221,7 +316,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://preview.redd.it/fan-art-poster-for-alan-wake-2-by-me-v0-hqbzqwylucxb1.jpg?width=2526&format=pjpg&auto=webp&s=1cb9d31109c20ef5c438ecf1b115a483cc1543b2">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://preview.redd.it/fan-art-poster-for-alan-wake-2-by-me-v0-hqbzqwylucxb1.jpg?width=2526&format=pjpg&auto=webp&s=1cb9d31109c20ef5c438ecf1b115a483cc1543b2">
+              <img class="hov" src="https://www.gameshub.com/wp-content/uploads/sites/5/2023/06/alan-wake-2-game-tribeca-games-festival.jpeg">
+            </a>
+          </div>
           <div class="content">
             <h4>Alan Wake 2</h4>
             <div class="progress-line"><span></span></div>
@@ -236,7 +336,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://store-images.s-microsoft.com/image/apps.27418.13768370188591668.302c14c1-c563-4b96-9413-8dcd386e8806.35943a0f-ac2d-4952-b31a-6c3aad7db3aa?w=400&h=600">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://store-images.s-microsoft.com/image/apps.27418.13768370188591668.302c14c1-c563-4b96-9413-8dcd386e8806.35943a0f-ac2d-4952-b31a-6c3aad7db3aa?w=400&h=600">
+              <img class="hov" src="https://yourgames.tv/wp-content/uploads/2023/02/Diablo-4-Sanctuary-world-map-zones-IV-dungeon-fight-creatures-temple.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Diablo IV</h4>
             <div class="progress-line"><span></span></div>
@@ -251,7 +356,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://upload.wikimedia.org/wikipedia/en/d/df/Resident_Evil_4_remake_cover_art.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://upload.wikimedia.org/wikipedia/en/d/df/Resident_Evil_4_remake_cover_art.jpg">
+              <img class="hov" src="https://i.ytimg.com/vi/PZxMXPds0-8/maxresdefault.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Resident Evil 4</h4>
             <div class="progress-line"><span></span></div>
@@ -265,7 +375,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://preview.redd.it/azasf35u0sr91.jpg?width=4961&format=pjpg&auto=webp&s=18e391a7364a2cdf423523b879b4c4e591de8149">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://preview.redd.it/azasf35u0sr91.jpg?width=4961&format=pjpg&auto=webp&s=18e391a7364a2cdf423523b879b4c4e591de8149">
+              <img class="hov" src="https://cdn.vox-cdn.com/thumbor/9gqK9jRXoYCw2HzyCB9KlGDCIP4=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/71925114/ds_launch_trlrscreen_07.jpg.adapt.1920w.0.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Dead Space</h4>
             <div class="progress-line"><span></span></div>
@@ -279,7 +394,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://picfiles.alphacoders.com/145/thumb-145318.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://picfiles.alphacoders.com/145/thumb-145318.jpg">
+              <img class="hov" src="https://www.godisageek.com/wp-content/uploads/What-affects-the-gameplay-of-CSGO.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Counter Strike: Global Offensive</h4>
             <div class="progress-line"><span></span></div>
@@ -293,7 +413,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://www.posters.eu/media/catalog/product/cache/cb3faf85ecb1e071fdba48f981c86454/e/l/elden-ring-battlefield-of-the-fallen-poster-61x91.5cm.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://www.posters.eu/media/catalog/product/cache/cb3faf85ecb1e071fdba48f981c86454/e/l/elden-ring-battlefield-of-the-fallen-poster-61x91.5cm.jpg">
+              <img class="hov" src="https://www.dsogaming.com/wp-content/uploads/2022/01/Elden-Ring-new-screenshots-1.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Elden Ring</h4>
             <div class="progress-line"><span></span></div>
@@ -307,7 +432,12 @@
           </div>
         </div>
         <div class="card" data-item="pc" data-price="">
-          <img src="https://upload.wikimedia.org/wikipedia/en/c/c6/Wo_Long_Fallen_Dynasty_cover.jpeg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://upload.wikimedia.org/wikipedia/en/c/c6/Wo_Long_Fallen_Dynasty_cover.jpeg">
+              <img class="hov" src="https://assetsio.reedpopcdn.com/wo-long-ice-sword.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp">
+            </a>
+          </div>
           <div class="content">
             <h4>Wo Long: Fallen Dynasty</h4>
             <div class="progress-line"><span></span></div>
@@ -322,7 +452,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://upload.wikimedia.org/wikipedia/vi/0/0a/Genshin_Impact_cover.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://upload.wikimedia.org/wikipedia/vi/0/0a/Genshin_Impact_cover.jpg">
+              <img class="hov" src="https://cdn-img.thethao247.vn/upload/caodat/2021/01/08/genshin-impact-se-khong-ra-mat-che-do-pvp1610095086.png">
+            </a>
+          </div>
           <div class="content">
             <h4>Genshin Impact</h4>
             <div class="progress-line"><span></span></div>
@@ -336,7 +471,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTg4MDM4YjMtZTVmOS00ZDMxLWJlZDMtMDI5ZTM2ZTY3OWUxXkEyXkFqcGdeQXVyMjQ4Mzc4ODQ@._V1_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/M/MV5BMTg4MDM4YjMtZTVmOS00ZDMxLWJlZDMtMDI5ZTM2ZTY3OWUxXkEyXkFqcGdeQXVyMjQ4Mzc4ODQ@._V1_.jpg">
+              <img class="hov" src="https://assets-prd.ignimgs.com/2021/06/10/screen-shot-2021-06-10-at-3-06-04-pm-1623352046045.png">
+            </a>
+          </div>
           <div class="content">
             <h4>Sky: Children of the Light</h4>
             <div class="progress-line"><span></span></div>
@@ -350,7 +490,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://i.ebayimg.com/images/g/0PUAAOSwqZ9gsUHs/s-l1200.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://i.ebayimg.com/images/g/0PUAAOSwqZ9gsUHs/s-l1200.jpg">
+              <img class="hov" src="https://www.digitaltrends.com/wp-content/uploads/2022/11/among-us-vr-imposter-next-to-body.png?p=1">
+            </a>
+          </div>
           <div class="content">
             <h4>Among Us</h4>
             <div class="progress-line"><span></span></div>
@@ -364,7 +509,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://myhotposters.com/cdn/shop/products/mL3656_1024x1024.jpg?v=1571445734">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://myhotposters.com/cdn/shop/products/mL3656_1024x1024.jpg?v=1571445734">
+              <img class="hov" src="https://gamingonphone.com/wp-content/uploads/2019/07/callfodutymobile.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Call of Duty Mobile</h4>
             <div class="progress-line"><span></span></div>
@@ -378,7 +528,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1s08.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1s08.jpg">
+              <img class="hov" src="https://pbs.twimg.com/media/ExVKY3jVEAArKS1?format=jpg&name=large">
+            </a>  
+          </div>
           <div class="content">
             <h4>Wild Rift</h4>
             <div class="progress-line"><span></span></div>
@@ -392,7 +547,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://giantbrain.co.uk/wp-content/uploads/2022/10/Screenshot_20221026-173110_Easy-Resize.com_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://giantbrain.co.uk/wp-content/uploads/2022/10/Screenshot_20221026-173110_Easy-Resize.com_.jpg">
+              <img class="hov" src="https://preview.redd.it/marvels-snap-gameplay-is-so-refreshing-and-fun-v0-2g0mwe911q1a1.jpg?auto=webp&s=7501bbdefa849f5dccafdfdcd05ce427f12e9b0f">
+            </a>
+          </div>
           <div class="content">
             <h4>Marvel Snap</h4>
             <div class="progress-line"><span></span></div>
@@ -406,7 +566,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://assetsio.reedpopcdn.com/co2pwy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://assetsio.reedpopcdn.com/co2pwy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp">
+              <img class="hov" src="https://cdn.mos.cms.futurecdn.net/rfSmpzaf9bySKvMrFW3UuT-1200-80.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Diablo Immortal</h4>
             <div class="progress-line"><span></span></div>
@@ -420,7 +585,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://m.media-amazon.com/images/M/MV5BMjUwMDhiY2EtNWVkMy00NDU0LTliNmYtMTRhYTViZjE5YWQzXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/M/MV5BMjUwMDhiY2EtNWVkMy00NDU0LTliNmYtMTRhYTViZjE5YWQzXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_.jpg">
+              <img class="hov" src="https://cdn01.x-plarium.com/browser/content/company/Our_Games/Raid/screenshots/1.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Raid: Shadow Legends</h4>
             <div class="progress-line"><span></span></div>
@@ -434,7 +604,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://m.media-amazon.com/images/M/MV5BMzllN2IwYzEtODZhNC00ODRkLWE2ZmUtODdiOTU2YjZlZTk0XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_UY1200_CR85,0,630,1200_AL_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/M/MV5BMzllN2IwYzEtODZhNC00ODRkLWE2ZmUtODdiOTU2YjZlZTk0XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_UY1200_CR85,0,630,1200_AL_.jpg">
+              <img class="hov" src="https://i.ytimg.com/vi/7ghSziUQnhs/maxresdefault.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Subway Surfers</h4>
             <div class="progress-line"><span></span></div>
@@ -448,7 +623,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://m.media-amazon.com/images/M/MV5BZTZlMWQxMDMtMmIyYi00YTk5LWExNjktOTU2NDA1Zjc2OGI0XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/M/MV5BZTZlMWQxMDMtMmIyYi00YTk5LWExNjktOTU2NDA1Zjc2OGI0XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg">
+              <img class="hov" src="https://www.emulatorpc.com/wp-content/uploads/2018/04/clashofclans_screenshot2.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Clash Of Clans</h4>
             <div class="progress-line"><span></span></div>
@@ -462,7 +642,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/40eee067-5ae5-4693-9b50-ad9789c5e06f/dewtwd3-ebee7b9b-0d50-49ef-abae-ede546693bfd.jpg/v1/fill/w_1280,h_1921,q_75,strp/honkai_impact_3rd_poster_design_by_nnrarchive_dewtwd3-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMSIsInBhdGgiOiJcL2ZcLzQwZWVlMDY3LTVhZTUtNDY5My05YjUwLWFkOTc4OWM1ZTA2ZlwvZGV3dHdkMy1lYmVlN2I5Yi0wZDUwLTQ5ZWYtYWJhZS1lZGU1NDY2OTNiZmQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.j0pUQbQprJ_A8jI-ubGiP8RCAd26IR15HK70vsuGzAc">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/40eee067-5ae5-4693-9b50-ad9789c5e06f/dewtwd3-ebee7b9b-0d50-49ef-abae-ede546693bfd.jpg/v1/fill/w_1280,h_1921,q_75,strp/honkai_impact_3rd_poster_design_by_nnrarchive_dewtwd3-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMSIsInBhdGgiOiJcL2ZcLzQwZWVlMDY3LTVhZTUtNDY5My05YjUwLWFkOTc4OWM1ZTA2ZlwvZGV3dHdkMy1lYmVlN2I5Yi0wZDUwLTQ5ZWYtYWJhZS1lZGU1NDY2OTNiZmQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.j0pUQbQprJ_A8jI-ubGiP8RCAd26IR15HK70vsuGzAc">
+              <img class="hov" src="https://i.redd.it/05mn5kdbp7e61.png">
+            </a>
+          </div>
           <div class="content">
             <h4>Honkai Impact 3</h4>
             <div class="progress-line"><span></span></div>
@@ -476,7 +661,12 @@
           </div>
         </div>
         <div class="card" data-item="mobile" data-price="">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTM4MTc2ZDgtY2I2Zi00NmQ0LTg3ZTUtNzE3NGM0ZDU3MmZmXkEyXkFqcGdeQXVyNjc2NjYwOTA@._V1_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/M/MV5BMTM4MTc2ZDgtY2I2Zi00NmQ0LTg3ZTUtNzE3NGM0ZDU3MmZmXkEyXkFqcGdeQXVyNjc2NjYwOTA@._V1_.jpg">
+              <img class="hov" src="https://play-lh.googleusercontent.com/DWF633NByqubnbRErjGd_booz6OIFowHWDmRbafPqnNUCbguETd_PEaJvcqmsAS7Cw=w526-h296-rw">
+            </a>
+          </div>
           <div class="content">
             <h4>Arena Of Valor</h4>
             <div class="progress-line"><span></span></div>
@@ -490,7 +680,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://m.media-amazon.com/images/M/MV5BMDUzZjQxMWEtODc5NC00MTA2LThhMGItMjRkY2Y2OGU1NDg3XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/M/MV5BMDUzZjQxMWEtODc5NC00MTA2LThhMGItMjRkY2Y2OGU1NDg3XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg">
+              <img class="hov" src="https://spidersweb.pl/_next/image?url=https%3A%2F%2Focs-pl.oktawave.com%2Fv1%2FAUTH_2887234e-384a-4873-8bc5-405211db13a2%2Fspidersweb%2F2020%2F11%2Fdemons-souls20201112043554-1000x563.jpg&w=1200&q=75">
+            </a>
+          </div>
           <div class="content">
             <h4>Demon's Souls (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -504,7 +699,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://cdn.europosters.eu/image/1300/posters/assassin-s-creed-valhalla-standard-edition-i97796.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://cdn.europosters.eu/image/1300/posters/assassin-s-creed-valhalla-standard-edition-i97796.jpg">
+              <img class="hov" src="https://assetsio.reedpopcdn.com/ubisoft-finally-shows-assassins-creed-valhalla-gameplay-1594585580741.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp">
+            </a>
+          </div>
           <div class="content">
             <h4>Assassin's Creed: Valhalla (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -518,7 +718,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/PRfYtTZQsuj3ALrBXGL8MjAH.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/PRfYtTZQsuj3ALrBXGL8MjAH.jpg">
+              <img class="hov" src="https://4kwallpapers.com/images/wallpapers/marvels-spider-man-miles-morales-gameplay-playstation-5-1680x1050-3446.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Spider-Man: Miles Morales (PS4-PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -532,7 +737,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://m.media-amazon.com/images/I/71MLMRhVSIL._AC_UF1000,1000_QL80_.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://m.media-amazon.com/images/I/71MLMRhVSIL._AC_UF1000,1000_QL80_.jpg">
+              <img class="hov" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/315889373/original/562468edb64cffeae76ffc8776008db092cfc568/do-3d-game-development-with-unreal-engine-5.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Mortal Kombat 11 (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -546,7 +756,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/c16gs6a7lbAYzPf7ZTikbH1c.png">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/c16gs6a7lbAYzPf7ZTikbH1c.png">
+              <img class="hov" src="https://i.ytimg.com/vi/Geq5b0BHjE0/maxresdefault.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Ghost of Tsushima: Director's Cut (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -560,7 +775,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/1710/86flTX6TLYP7MABrMUt3An6m.png">
+          <div class="container">
+            <a href="#">
+              <img class= "main" src="https://image.api.playstation.com/vulcan/ap/rnd/202009/1710/86flTX6TLYP7MABrMUt3An6m.png">
+              <img class="hov" src="https://www.comingsoon.net/wp-content/uploads/sites/3/2020/09/DMC5SE_Vergil_04.png">
+            </a>
+          </div>
           <div class="content">
             <h4>Devil May Cry 5: Special Edition (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -574,7 +794,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg">
+              <img class="hov" src="https://www.gameinformer.com/sites/default/files/styles/full/public/2023/07/20/ffa384df/marvels_spider-man_2_new_story_trailer_gameplay_venom-2.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Marvel's Spider-Man 2 (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -588,7 +813,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://picfiles.alphacoders.com/556/thumb-556163.jpg">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://picfiles.alphacoders.com/556/thumb-556163.jpg">
+              <img class="hov" src="https://i.redd.it/god-of-war-ragnarok-poster-recreated-in-destiny-2-v0-7duwce4jx3a91.jpg?width=3840&format=pjpg&auto=webp&s=1f70967c44955ef2c14bab5ca1013ee9d6a77ce4">
+            </a>
+          </div>
           <div class="content">
             <h4>God of War: Ragnarok (PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -602,7 +832,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://myhotposters.com/cdn/shop/products/mL4518_1024x1024.jpg?v=1594302628">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://myhotposters.com/cdn/shop/products/mL4518_1024x1024.jpg?v=1594302628">
+              <img class="hov" src="https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/5PQFREO3MBAFJLZDWK33ZH7TKQ.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>The Last Of Us: Part II (PS4-PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -616,7 +851,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://myhotposters.com/cdn/shop/products/mL4139_1024x1024.jpg?v=1577740598">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://myhotposters.com/cdn/shop/products/mL4139_1024x1024.jpg?v=1577740598">
+              <img class="hov" src="https://regionps.com/wp-content/uploads/2019/10/Dragon-Ball-Z-Kakarot_2019_10-21-19_010-1140x641.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Dragonball Z Kakarot (PS4)</h4>
             <div class="progress-line"><span></span></div>
@@ -630,7 +870,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06904514-8244-4a62-bc3c-505467cab7d4/ddm1ioq-9cf26cc8-ac51-4d69-935c-358b1b14b060.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2OTA0NTE0LTgyNDQtNGE2Mi1iYzNjLTUwNTQ2N2NhYjdkNFwvZGRtMWlvcS05Y2YyNmNjOC1hYzUxLTRkNjktOTM1Yy0zNThiMWIxNGIwNjAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pMM7skW8OroHOv-_yqRU31K9QnV42ZsMrglmaQAUt5M">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06904514-8244-4a62-bc3c-505467cab7d4/ddm1ioq-9cf26cc8-ac51-4d69-935c-358b1b14b060.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2OTA0NTE0LTgyNDQtNGE2Mi1iYzNjLTUwNTQ2N2NhYjdkNFwvZGRtMWlvcS05Y2YyNmNjOC1hYzUxLTRkNjktOTM1Yy0zNThiMWIxNGIwNjAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pMM7skW8OroHOv-_yqRU31K9QnV42ZsMrglmaQAUt5M">
+              <img class="hov" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2020/04/Resident-Evil-3-Remake-Nightmare-Inferno-Hidden-Difficulty-Mode-Better-Horror-Game.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Resident Evil 3 Remake (PS4-PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -644,7 +889,12 @@
           </div>
         </div>
         <div class="card" data-item="ps" data-price="">
-          <img src="https://myhotposters.com/cdn/shop/products/mL3850_1024x1024.jpg?v=1572970180">
+          <div class="container">
+            <a href="#">
+              <img class="main" src="https://myhotposters.com/cdn/shop/products/mL3850_1024x1024.jpg?v=1572970180">
+              <img class="hov" src="https://image.gamer.ne.jp/news/2021/20210826/0009a030890d1911fbcbd909ba8255576abf/o/1.jpg">
+            </a>
+          </div>
           <div class="content">
             <h4>Death Stranding (PS4-PS5)</h4>
             <div class="progress-line"><span></span></div>
@@ -743,7 +993,7 @@
         </div>
       </div>
       <!--contact-->
-      <div class="contact animeX" id="contact">
+    <div class="contact animeX" id="contact">
         <img src="https://www.blogtyrant.com/wp-content/uploads/2019/12/best-contact-us-pages-2.png">
         <div class="form">
           <h1>Contact Us</h1>
@@ -763,9 +1013,18 @@
             <input type="submit" name="Submit">
           </div>
         </div>
+    </div>
+    <!-- about -->
+    <div class="about animeX" id="about">
+      <div class="contentBx">
+        <h2>About</h2>
+        <p>Lavie Studio is the ultimate destination for playing, discussing, and creating games. </p>
+        <a href="#" style="float:right;">Read more</a>
       </div>
+      <img src="img/cyberpunk-gaming-controller-gamepad-joystick-illustration_691560-5812-removebg-preview.png">
+    </div>
       <!--footer-->
-      <footer>
+    <footer>
         <div class="info">
           <a href="#" class="logo">Lavie Studio</a>
           <p>
@@ -799,7 +1058,8 @@
             <i class='bx bxs-to-top'></i>
           </button>
         </div>
-      </footer>
-      <script src="js/tulam.js"></script>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/sort_by_alphabet.js"></script>
   </body>
 </html>
