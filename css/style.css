@@ -8,10 +8,11 @@
 	scroll-behavior: smooth;
 }
 
-body {
+body, html {
 	background: #65ccb8;
 	width: 100%;
-    height: 100%;
+    height: 100vh;
+  	height: calc(var(--vh, 1vh) * 100);
 }
 
 header {
@@ -301,60 +302,6 @@ header .shop .clear-cart{
         background-size: cover;
 	}
   }
-/*about*/
-.about {
-	position: relative;
-	width: 100%;
-	min-height: 75vh;
-	padding: 0px 100px;
-	left: 10px;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.about img {
-	position: absolute;
-}
-
-.about .contentBx {
-	width: 50%;
-	margin: 20px;
-	float: right;
-}
-
-.about .contentBx h2 {
-	font-size: 3em;
-	font-weight: 700;
-	color: #f2f2f2;
-	float: right;
-}
-
-.about .contentBx p {
-	max-width: 600px;
-	text-align: justify;
-	color: #f2f2f2;
-	display: inline-block;
-}
-
-.about .contentBx a {
-	display: inline-block;
-	padding: 10px 20px;
-	border: 1px solid #182628;
-	text-decoration: none;
-	color: #f2f2f2;
-	font-weight: 700;
-	border-radius: 5px;
-	letter-spacing: 1px;
-	right: 10px;
-}
-
-.about .contentBx a:hover {
-	background: #3b945e;
-	color: #f2f2f2;
-	box-shadow: 0 0 10px #347474;
-	border: none;
-}
-
 /*game*/
 .games {
 	padding: 0px 100px;
@@ -529,7 +476,6 @@ header .shop .clear-cart{
 	box-shadow: 0 0 10px #347474;
 	border: none;
 }
-
 .games .cardBx .card.hide {
 	display: none;
 }
@@ -757,7 +703,59 @@ header .shop .clear-cart{
 	box-shadow: 0 0 10px #347474;
 	border: none;
 }
+/*about*/
+.about {
+	position: relative;
+	width: 100%;
+	min-height: 75vh;
+	padding: 0px 100px;
+	left: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
 
+.about img {
+	position: absolute;
+}
+
+.about .contentBx {
+	width: 50%;
+	margin: 20px;
+	float: right;
+}
+
+.about .contentBx h2 {
+	font-size: 3em;
+	font-weight: 700;
+	color: #f2f2f2;
+	float: right;
+}
+
+.about .contentBx p {
+	max-width: 600px;
+	text-align: justify;
+	color: #f2f2f2;
+	display: inline-block;
+}
+
+.about .contentBx a {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid #182628;
+	text-decoration: none;
+	color: #f2f2f2;
+	font-weight: 700;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	right: 10px;
+}
+
+.about .contentBx a:hover {
+	background: #3b945e;
+	color: #f2f2f2;
+	box-shadow: 0 0 10px #347474;
+	border: none;
+}
 /*footer*/
 footer {
 	padding: 10px 100px;
@@ -855,9 +853,17 @@ footer .topbtn #myBtn:hover {
 	transform: translateY(0px);
 	opacity: 1;
 }
+/*cart*/
 
 /* responsive design */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1000px) {
+	html{
+		width: 100%;
+    	height: auto;
+	}
+	body{
+		width: 95%;
+	}
 	header {
 		padding: 15px 40px;
 	}
@@ -874,6 +880,8 @@ footer .topbtn #myBtn:hover {
 		align-items: center;
 		flex-direction: column;
 		z-index: 1000;
+		max-width: 100%;
+		height:auto;
 	}
 
 	header .nav.active {
@@ -929,11 +937,13 @@ footer .topbtn #myBtn:hover {
 		border-radius: 10px;
 		left:0;
 	}
-	.games .cardBx .card,
-	.tournaments .boxBx .box
-	{
-		width: 100%;
-		height: 100%;
+	.games .indicator {
+		flex-direction: column;
+		text-align: center;
+	}
+	.games .cardBx {
+		width: fit-content;
+		block-size: fit-content;
 	}
 	.about, .tournaments, .games {
 		flex-direction: column;
@@ -947,9 +957,13 @@ footer .topbtn #myBtn:hover {
 		z-index: 1;
 		border-radius: 8px;
 	}
-
+	.about .contentBx a{
+		margin:20px;
+	}
 	.about img {
 		position: relative;
+		max-width: 100%;
+		height:auto;
 	}
 
 	.contact {
