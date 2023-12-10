@@ -751,6 +751,9 @@
      width: 300px;
      display: none;
 }
+#cart-dropdown p{
+    text-indent: 8px;
+}
  #cart:hover #cart-dropdown {
      display: block;
 }
@@ -848,6 +851,7 @@
          text-align: center;
          justify-content: center;
     }
+
      .toggleMenu {
          position: relative;
          width: 100%;
