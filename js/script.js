@@ -109,22 +109,6 @@ function sortCardsByPrice(ascending) {
     cardBx.appendChild(card);
   });
 }
-
-// add to cart 
-const cart = document.getElementById("cart");
-const addButtons = document.getElementsByClassName('add');
-
-for(let i = 0; i < addButtons.length; i++) {
-  addButtons[i].onclick = function add_item() {
-    const item = cart.innerText;
-    cart.innerText = parseInt(item, 10) + 1;
-  }
-}
-// clear cart 
-document.querySelector('.clear-cart').addEventListener('click', function() {
-  document.getElementById('cart').textContent = '0';
-});
-
 // hover img
 $(".image-swap").hover( 
   function () { $(this).addClass("hovered"); } ,
@@ -166,3 +150,11 @@ var timer = null;
         dots[slideIndex - 1].className += " active";
         timer=setTimeout(showSlides,5500);
       }
+
+  // css variable
+  const resizeOps = () => {
+    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  };
+
+  resizeOps();
+  window.addEventListener("resize", resizeOps);
