@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Lavie Studio</title>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
       <link rel="stylesheet" href="css/style.css">
       <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -44,7 +45,7 @@
           <h2 onmouseenter="updateCartDisplay()"><i class='bx bx-cart-download'></i></h2>
           <div id="cart-dropdown" onmouseleave="hideCartDropdown()">
             <ul id="cart-items"></ul>
-            <p>Total: <span id="cart-total">0đ</span></p>
+            <p><b>Total:</b> <span id="cart-total">0đ</span></p>
             <a href="checkout.html">
               <p >Checkout</p>
             </a>
@@ -105,8 +106,8 @@
             <img src="img/wukong.jpg">
             <div class="text">Black Myth Wukong</div>
          </div>
-         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+         <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+         <button class="next" onclick="plusSlides(1)">&#10095;</button>
       </div>
       <br>
       <div class="dot-container">
@@ -136,8 +137,8 @@
                <option value="default"> Default</option>
                <option value="lowToHigh"> Price: Lowest to highest</option>
                <option value="highToLow"> Price: Highest to lowest</option>
-               <option value="aToZ"> Alphabetical order: A - Z</option>
-               <option value="zToA"> Alphabetical order: Z - A</option>
+               <option value="AtoZ"> Alphabetical order: A - Z</option>
+               <option value="ZtoA"> Alphabetical order: Z - A</option>
             </select>
          </div>
          <div class="cardBx">
@@ -973,7 +974,7 @@
                <textarea placeholder="Type here..."></textarea>
             </div>
             <div class="inputBx">
-               <input type="submit" name="Submit">
+               <input type="submit" placeholder="Submit">
             </div>
          </div>
       </div>
@@ -994,22 +995,22 @@
                <i class='bx bx-copyright'></i> 2023 All Rights Reserved
             </p>
             <ul>
-               <li>
+               <li class="fb">
                   <a href="#">
                   <i class="fab fa-facebook-f icon"></i>
                   </a>
                </li>
-               <li>
+               <li class="twitter">
                   <a href="#">
                   <i class="fab fa-twitter icon"></i>
                   </a>
                </li>
-               <li>
+               <li class="linkedin">
                   <a href="#">
                   <i class="fab fa-linkedin-in icon"></i>
                   </a>
                </li>
-               <li>
+               <li class="gg">
                   <a href="#">
                   <i class="fab fa-google-plus-g icon"></i>
                   </a>
@@ -1025,9 +1026,5 @@
       <script src="js/script.js"></script>
       <script src="js/sort_by_alphabet.js"></script>
       <script src="js/app.js"></script>
-      <script src="js/jquery-1.11.3.min.js"></script>
-      <script src="js/simpleCart.min.js"></script>
-      <script src="js/handlebars.min.js"></script>
-      <script src="js/sheetrock.min.js"></script>
    </body>
 </html>
