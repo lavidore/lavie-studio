@@ -290,7 +290,9 @@
      align-items: center;
 }
  .games .cardBx .card {
-     width: 200px;
+    height: 500px; /* play around with this number until you get the height you need */
+    width: 200px;
+    max-width: 100%;
      border-radius: 10px;
      margin: 20px 40px;
      background: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -303,8 +305,9 @@
      position: relative;
 }
  .games .cardBx .card .container img{
-     width: 100%;
-     height: 250px;
+     height:300px;
+    width: auto;
+    max-width: 100%;
      object-fit: cover;
 }
  .games .cardBx .card .container a img.main{
