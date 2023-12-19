@@ -20,10 +20,7 @@ function addToCart(itemName, price) {
   updateCartDisplay();
   updateLocalStorage();
 }
-function hideCartDropdown() {
-  const cartDropdown = document.getElementById('cart-dropdown');
-  cartDropdown.style.display = 'none';
-}
+
 function updateCartDisplay() {
     const cartDropdown = document.getElementById('cart-dropdown');
     const cartItemsList = document.getElementById('cart-items');
@@ -36,9 +33,11 @@ function updateCartDisplay() {
     cartItems.forEach((item, index) => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `
-        <span>${item.itemName} (${item.quantity}) - ${item.price * item.quantity}đ</span>
-        <span class="decrease-button" onclick="decreaseCartItem(${index})"><i class='bx bx-minus'></i></span>
-        <span class="remove-button" onclick="removeCartItem(${index})"><i class='bx bx-x-circle'></i></span>
+      <div class="cart-button">
+          <span>${item.itemName} (${item.quantity}) - ${item.price * item.quantity}đ</span>
+          <span class="decrease-button" onclick="decreaseCartItem(${index})"><i class='bx bx-minus'></i></span>
+          <span class="remove-button" onclick="removeCartItem(${index})"><i class='bx bx-x-circle'></i></span>
+      </div>
       `;
       cartItemsList.appendChild(listItem);
     });
@@ -49,6 +48,10 @@ function updateCartDisplay() {
     // Show the cart dropdown
     cartDropdown.style.display = 'block';
     updateLocalStorage();
+  }
+  function hideCartDropdown() {
+    const cartDropdown = document.getElementById('cart-dropdown');
+    cartDropdown.style.display = 'none';
   }
   function decreaseCartItem(index) {
     if (cartItems[index].quantity > 1) {
