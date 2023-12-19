@@ -37,7 +37,10 @@
             <div class="searchBx">
                <a href="#"></a>
                <i class='bx bx-search-alt-2'></i>
-               <input type="text" id="searchbar" placeholder="Search games...">
+               <input type="text" id="searchbar" placeholder="Search games..." oninput="showDropdown()">
+               <div id="searchDropdown" class="dropdown-content">
+                  <!-- search items show here -->
+               </div>
             </div>
          </div>
          <!-- cart -->
@@ -270,7 +273,7 @@
                         <span style="text-decoration: line-through;">1250.000đ</span>
                         <span>630.000đ</span>
                      </p>
-                     <button type="submit" class="add" onclick="addToCart('Assassin Creeds Mirage', 630000)">Add to cart</button>
+                     <button type="submit" class="add" onclick="addToCart('Assassins Creed Mirage', 630000)">Add to cart</button>
                   </div>
                </div>
             </div>
@@ -344,7 +347,7 @@
                         <span style="text-decoration: line-through;">1599.000đ</span>
                         <span>990.000đ</span>
                      </p>
-                     <button type="submit" class="add" onclick="addToCart('Diablo IV<', 990000)">Add to cart</button>
+                     <button type="submit" class="add" onclick="addToCart('Diablo IV', 990000)">Add to cart</button>
                   </div>
                </div>
             </div>
@@ -885,7 +888,7 @@
                </h4>
                <p>You're a champion!</p>
                <div class="btn">
-                  <a href="#" class="watch">Watch</a>
+                  <a href="https://youtu.be/Xn-bGsnfu9w" target=”_blank” class="watch">Watch</a>
                   <a href="#" class="join">Join</a>
                </div>
             </div>
@@ -898,7 +901,7 @@
                </h4>
                <p>Winners in life don’t always win; they just don’t give up.</p>
                <div class="btn">
-                  <a href="#" class="watch">Watch</a>
+                  <a href="https://youtu.be/BT11dLPaxvc?t=1490" target=”_blank” class="watch">Watch</a>
                   <a href="#" class="join">Join</a>
                </div>
             </div>
@@ -911,7 +914,7 @@
                </h4>
                <p>Easy peasy, lemon squeezy!</p>
                <div class="btn">
-                  <a href="#" class="watch">Watch</a>
+                  <a href="https://youtu.be/uftIOpcnW1Q?t=5340" target=”_blank” class="watch">Watch</a>
                   <a href="#" class="join">Join</a>
                </div>
             </div>
@@ -924,7 +927,7 @@
                </h4>
                <p>Play like there's no tomorrow.</p>
                <div class="btn">
-                  <a href="#" class="watch">Watch</a>
+                  <a href="https://youtu.be/S_5vlPXLCRc" target=”_blank” class="watch">Watch</a>
                   <a href="#" class="join">Join</a>
                </div>
             </div>
@@ -937,7 +940,7 @@
                </h4>
                <p>Game like a champion!</p>
                <div class="btn">
-                  <a href="#" class="watch">Watch</a>
+                  <a href="https://youtu.be/-wwM23ZVbfY" target=”_blank” class="watch">Watch</a>
                   <a href="#" class="join">Join</a>
                </div>
             </div>
@@ -950,7 +953,7 @@
                </h4>
                <p>Winning never gets old.</p>
                <div class="btn">
-                  <a href="#" class="watch">Watch</a>
+                  <a href="https://youtu.be/w49hYGXH-MM" target=”_blank” class="watch">Watch</a>
                   <a href="#" class="join">Join</a>
                </div>
             </div>
@@ -1026,5 +1029,6 @@
       <script src="js/script.js"></script>
       <script src="js/sort_by_alphabet.js"></script>
       <script src="js/app.js"></script>
+      <script src="js/search.js"></script>
    </body>
 </html>
