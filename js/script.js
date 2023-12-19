@@ -88,6 +88,10 @@ select.addEventListener('change', function() {
     sortCardsByPrice(true);
   } else if (selectedOption === 'highToLow') {
     sortCardsByPrice(false);
+  } else if (selectedOption === 'AtoZ') {
+    sortCardsAlphabetically(true);
+  } else if (selectedOption === 'ZtoA') {
+    sortCardsAlphabetically(false);
   }
 });
 
@@ -103,6 +107,18 @@ function sortCardsByPrice(ascending) {
     const priceA = parseFloat(a.querySelector('.info span:last-child').textContent);
     const priceB = parseFloat(b.querySelector('.info span:last-child').textContent);
     return ascending ? priceA - priceB : priceB - priceA;
+  });
+  const cardBx = document.querySelector('.cardBx');
+  sortedCards.forEach(function(card) {
+    cardBx.appendChild(card);
+  });
+}
+
+function sortCardsAlphabetically(ascending) {
+  const sortedCards = Array.from(cards).sort(function(a, b) {
+    const titleA = a.querySelector('h4').textContent.toUpperCase();
+    const titleB = b.querySelector('h4').textContent.toUpperCase();
+    return ascending ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
   });
   const cardBx = document.querySelector('.cardBx');
   sortedCards.forEach(function(card) {
@@ -126,6 +142,7 @@ var timer = null;
       function currentSlide(n) {
         clearTimeout(timer);
         showSlides(slideIndex = n);
+        showButtons();
       }
       function showSlides(n) {
         var i;
@@ -150,7 +167,12 @@ var timer = null;
         dots[slideIndex - 1].className += " active";
         timer=setTimeout(showSlides,5500);
       }
-
+      function showButtons() {
+        var buttons = document.querySelectorAll('.prev, .next');
+        buttons.forEach(function(button) {
+          button.style.display = 'block';
+        });
+      }
   // css variable
   const resizeOps = () => {
     document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
