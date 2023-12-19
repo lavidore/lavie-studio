@@ -2,6 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" type="image/x-icon" href="https://icons-for-free.com/iconfiles/png/512/buy+cart+checkout+ecommerce+retail+shopping+icon-1320086032792426891.png">
       <title>Checkout</title>
@@ -44,7 +45,7 @@
       <div id="checkout-items">
          <!-- Display the cart items here -->
       </div>
-      <p>Total: <span id="checkout-total">0đ</span></p>
+      <p>Payment detail: <span id="checkout-total">0đ</span></p>
       <button>
         <span>Buy now</span>
       </button> 
@@ -61,11 +62,19 @@
          checkoutItemsContainer.innerHTML = '';
          
          // Populate cart items on the checkout page
-         storedCartItems.forEach(item => {
-           const itemElement = document.createElement('p');
-           itemElement.textContent = `${item.itemName} (${item.quantity}) - ${item.price * item.quantity}đ`;
-           checkoutItemsContainer.appendChild(itemElement);
-         });
+         if (storedCartItems.length === 0) {
+            // Cart is empty, display "Empty cart" message
+            const emptyCartMessage = document.createElement('p');
+            emptyCartMessage.textContent = 'Your cart is empty!';
+            checkoutItemsContainer.appendChild(emptyCartMessage);
+         } else {
+            // Populate cart items on the checkout page
+            storedCartItems.forEach(item => {
+               const itemElement = document.createElement('p');
+               itemElement.textContent = `${item.itemName} (${item.quantity}) - ${item.price * item.quantity}đ`;
+               checkoutItemsContainer.appendChild(itemElement);
+            });
+         }
          
          // Update total price on the checkout page
          checkoutTotal.textContent = `${storedTotal}đ`;
