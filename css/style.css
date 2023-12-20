@@ -7,7 +7,7 @@
      scroll-behavior: smooth;
 }
  body {
-     background: #17252a;
+     background: #191919;
      min-height: 100vh;
      max-width:100%;
      overflow-x: hidden;
@@ -68,13 +68,14 @@
      box-shadow: 0 0 10px #347474;
 }
  header .action .searchBx {
-     padding: 5px;
+     height:40px;
      margin: 5px;
-     display: flex;
      justify-content: center;
      align-items: center;
      background: #F0ECE5;
      border-radius: 5px;
+     position: relative;
+    display: inline-block;
 }
  header .action .searchBx i {
      font-size: 1.4em;
@@ -88,6 +89,30 @@
      color: #182628;
      background: #F0ECE5;
 }
+/* searchbar */
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    z-index: 1;
+    top: 100%;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+ }
+
+ .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+ }
+
+ .dropdown-content a:hover {
+    background-color: #00bbf0;
+ }
 /* home banner */
  .banner {
      position: relative;
@@ -290,9 +315,9 @@
      align-items: center;
 }
  .games .cardBx .card {
-    height: 500px; /* play around with this number until you get the height you need */
-    width: 200px;
-    max-width: 100%;
+     width: 200px;
+     height:456px;
+     max-width:100%;
      border-radius: 10px;
      margin: 20px 40px;
      background: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -305,9 +330,8 @@
      position: relative;
 }
  .games .cardBx .card .container img{
-     height:300px;
-    width: auto;
-    max-width: 100%;
+     width: 100%;
+     height: 250px;
      object-fit: cover;
 }
  .games .cardBx .card .container a img.main{
@@ -384,9 +408,11 @@
  .games .cardBx .card .info p {
      font-size: 1em;
      color: #f2f2f2;
+     margin-right: 10px;
 }
  .games .cardBx .card .info p span {
      color: #f2f2f2;
+     font-weight: bold;
 }
  .games .cardBx .card .info a {
      color: #7dace4;
@@ -414,19 +440,21 @@
 }
  .games .cardBx .card .info button{
      display: inline-block;
-     padding: 10px 20px;
+     padding: 10px 15px;     
      font-weight: bold;
      text-align: center;
      text-decoration: none;
      margin:5px;
-     height:auto;
-     width: auto;
+     height:70px;
+     width: 70px;
      color: #f2f2f2;
      background: none;
      border: 1.5px solid #000;
-     border-radius: 10px;
-     box-shadow: 5px 5px 0px #000;
+     border-radius: 7px;
      transition: all 0.3s ease;
+     cursor: pointer;
+     right:10px;
+     bottom:10px;
 }
  .games .cardBx .card .info button:hover{
     background: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 2.2%, rgb(32, 7, 80) 20.2%, rgb(27, 88, 111) 58.6%, rgb(115, 88, 44) 75%, rgb(99, 19, 90) 89.6%, rgb(12, 51, 76) 96.1%);
@@ -440,13 +468,13 @@
      transform: translateY(4px);
 }
  .games .filter-condition{
+    color:#fff;
      margin-left: auto;
      margin-right: 0;
      padding: 20px;
      height: 100px;
      font-size: 20px;
      font-weight: bold;
-     color: #fff;
      justify-content: center;
 }
  .games .filter-condition select {
@@ -461,7 +489,7 @@
      object-fit: cover;
 }
 .games .filter-condition select option{
-    background:#222222;
+    color:black;
 }
 /*tournament*/
  .tournaments {
@@ -705,9 +733,9 @@
      border: 1px solid #3b945e;
      max-width: 10em;
      margin: 3px;
-}
-:hover {
-    cursor: pointer;
+     &:hover {
+         cursor: pointer;
+    }
 }
  footer .info ul li:hover {
      color: #f2f2f2;
@@ -765,7 +793,10 @@ footer .info ul .gg:hover{
      position: relative;
 }
 #cart i{
-    color:white;
+    color:red;
+}
+#cart i:hover{
+    font-weight: bolder;
 }
  #cart-dropdown {
      position: absolute;
@@ -811,15 +842,6 @@ footer .info ul .gg:hover{
 }
  #cart-dropdown a:hover {
      background-color: #2980b9;
-}
-.cart-button .right .remove-button,
-.cart-button .right .decrease-button {
-     cursor: pointer;
-     color: #e74c3c;
-}
-.cart-button .right .remove-button:hover,
-.cart-button .right .decrease-button:hover {
-     text-decoration: underline;
 }
 .cart-button{
 	display: inline-block;
