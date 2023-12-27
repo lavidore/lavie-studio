@@ -134,45 +134,61 @@ $(".image-swap").hover(
 // slideshow automatic and manual
 var slideIndex = 1;
 var timer = null;
-      showSlides(slideIndex);
-      function plusSlides(n) {
-        clearTimeout(timer);
-        showSlides(slideIndex += n);
-      }
-      function currentSlide(n) {
-        clearTimeout(timer);
-        showSlides(slideIndex = n);
-        showButtons();
-      }
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if(n==undefined){
-          n= ++slideIndex
-        }
-        if(n > slides.length) {
-          slideIndex = 1
-        }
-        if(n < 1) {
-          slideIndex = slides.length
-        }
-        for(i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for(i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        timer=setTimeout(showSlides,5500);
-      }
-      function showButtons() {
-        var buttons = document.querySelectorAll('.prev, .next');
-        buttons.forEach(function(button) {
-          button.style.display = 'block';
-        });
-      }
+
+// Call showSlides() initially
+var slideIndex = 1;
+var timer = null;
+
+// Call showSlides() initially
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    var slideshowContainer = document.querySelector(".slideshow-container");
+
+    if (n == undefined) {
+        n = ++slideIndex;
+    }
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    
+    // Show the slideshow container
+    slideshowContainer.style.display = "inline-block";
+
+    timer = setTimeout(showSlides, 5500);
+    showButtons(); // Call showButtons() after updating the slide
+}
+
+function showButtons() {
+    var buttons = document.querySelectorAll('.prev, .next');
+    buttons.forEach(function (button) {
+        button.style.display = 'block';
+    });
+}
   // css variable
   const resizeOps = () => {
     document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
@@ -180,3 +196,24 @@ var timer = null;
 
   resizeOps();
   window.addEventListener("resize", resizeOps);
+
+  // login popup
+  function openLoginPopup() {
+    var popup = document.getElementById("loginPopup");
+    popup.style.display = "block";
+}
+
+function closeLoginPopup() {
+    var popup = document.getElementById("loginPopup");
+    popup.style.display = "none";
+}
+
+// show pass
+function showPassword() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+} 

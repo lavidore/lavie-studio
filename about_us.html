@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Lavie Studio</title>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <script src="https://kit.fontawesome.com/f37f5bf160.js" crossorigin="anonymous"></script>
+      <style>
+        * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat',"Poppins", sans-serif;
+     scroll-behavior: smooth;
+}
+ body {
+     background: #191919;
+     min-height: 100vh;
+     max-width:100%;
+     overflow-x: hidden;
+}
+ header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 78px;
+     padding: 7px 100px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: 0.5s;
+     z-index: 1000;
+}
+/*scroll bar*/
+ ::-webkit-scrollbar {
+     width: 12px;
+}
+ ::-webkit-scrollbar-thumb {
+     background: #B6BBC4;
+     border-radius: 6px;
+}
+ header {
+     background: #F0A500;
+     box-shadow: 0 5px 20px #182628;
+}
+ header img {
+     position: relative;
+}
+ header a img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+}
+ header .nav {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+ header ul li {
+     list-style: none;
+     margin: 10px;
+}
+ header ul li a {
+     color: #f2f2f2;
+     text-decoration: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+
+}
+ header ul li a:hover {
+     background: #E45826;
+     color: #f2f2f2;
+     box-shadow: 0 0 10px #347474;
+}
+ header .action .searchBx {
+     height:40px;
+     margin: 7px;
+     justify-content: center;
+     align-items: center;
+     background: #F0ECE5;
+     border-radius: 5px;
+     position: relative;
+    display: inline-block;
+}
+ header .action .searchBx i {
+     font-size: 1.4em;
+     color: #182628;
+    margin:7px;
+}
+ header .action .searchBx input {
+     outline: none;
+     border: none;
+     font-size: 1em;
+     color: #182628;
+     background: #F0ECE5;
+}
+/* About Section */
+.about {
+    padding: 100px 0 20px 0;
+    text-align: center;
+    
+}
+ 
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:#fff;
+
+}
+ 
+.about p {
+    font-size: 1rem;
+    color: #323030;
+    max-width: 800px;
+    margin: 0 auto;
+    color:#fff;
+    text-align: center;
+
+}
+ 
+.about-info {
+    margin: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ 
+.about-info p {
+    font-size: 1.3rem;
+    margin: 0 2rem;
+    text-align: justify;
+}
+ 
+button {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    margin: 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #40b736;
+    text-align: center;
+    cursor: pointer;
+    width: 15rem;
+    border-radius: 4px;
+}
+ 
+button:hover {
+    background-color: #1f9405;
+}
+ 
+/* Team Section */
+.team {
+    padding: 30px 0;
+    text-align: center;
+    color:#fff;
+}
+ 
+.team h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+ 
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+ 
+.card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 18rem;
+    height: auto;
+    margin-top: 10px;
+}
+ 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+ 
+.card-img {
+    width: 18rem;
+    height: auto;
+}
+ 
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+ 
+.card-info button {
+    margin: 2rem 1rem;
+}
+ .card-info a{
+    text-decoration: none;
+ }
+.card-name {
+    font-size: 2rem;
+    margin: 10px 0;
+    color:#182628;
+}
+ 
+.card-role {
+    font-size: 1rem;
+    color: #888;
+    margin: 5px 0;
+}
+ 
+.card-email {
+    font-size: 1rem;
+    color: #555;
+}
+ 
+/* Footer */
+footer {
+     padding: 10px 100px;
+     margin-top: 50px;
+     text-align: center;
+}
+ footer .info {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+ footer .info .logo {
+     color: #f2f2f2;
+     text-decoration: none;
+     font-size: 2em;
+     font-weight: 700;
+}
+ footer .info p {
+     color: #f2f2f2;
+     margin: 0; /* Removes default margin on <p> element */
+    margin-left: 0; /* Aligns text to the left */}
+ footer .info ul {
+    margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+ footer .info ul li {
+     list-style: none;
+     height: 50px;
+     width: 50px;
+     margin: 5px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid #3b945e;
+     max-width: 10em;
+     margin: 3px;
+     
+}
+:hover {
+         cursor: pointer;
+    }
+ footer .info ul li:hover {
+     color: #f2f2f2;
+     box-shadow: 0 0 10px #347474;
+     border: none;
+}
+ footer .info ul li a i {
+     font-size: 1.5em;
+     color: #f2f2f2;
+     justify-content: center;
+}
+footer .info ul .fb:hover{
+    background:#1877F2;
+}
+footer .info ul .twitter:hover{
+    background:#1DA1F2;
+}
+footer .info ul .linkedin:hover{
+    background:#0077b5;
+}
+footer .info ul .gg:hover{
+    background:#DB4437;
+}
+ 
+@media (max-width: 768px) {
+    nav {
+        display: block;
+    }
+ 
+    .logo {
+        text-align: center;
+    }
+ 
+    .nav-links {
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+ 
+    .nav-links li {
+        margin-right: 0;
+    }
+ 
+    .about h1 {
+        font-size: 2rem;
+    }
+ 
+    .about p {
+        font-size: 0.9rem;
+    }
+ 
+    .about-info {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .about-img {
+        width: 60%;
+        height: 60%;
+        margin-bottom: 1rem;
+    }
+ 
+    .about-info p {
+        margin: 1rem 2rem;
+    }
+ 
+    .about-info button {
+        margin: 1rem 2rem;
+        width: 10rem;
+    }
+ 
+    .team {
+        margin: 0 1rem;
+        
+    }
+}
+      </style>
+   </head>
+   <body >
+      <!-- header -->
+      <header>
+         <a href="https://laviele.free.nf/lavie-studio">
+         <img src="img/logo.png" alt="icon" style="height:100px;width:100px;">
+         </a>
+         <ul class="nav">
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+            <li>
+               <a href="#browse">Browse</a>
+            </li>
+            <li>
+               <a href="#tournament">Tournament</a>
+            </li>
+            <li>
+               <a href="#contact">Contact</a>
+            </li>
+            <li>
+               <a href="#about">About</a>
+            </li>
+         </ul>
+      </header>
+      <body>
+        <section class="about">
+            <h1>About Us</h1>
+            <p style="font-weight: bold">Lavie Studio is a gaming platform</p>
+            <div class="about-info">
+                <div class="about-img">
+                </div>
+                <div>
+         <p>Founded in early 2023, Lavie Studio is a Vietnamese company founded by CEO Binh Ca. 
+            The company is headquartered in SG, Vietnam and has more than 40 offices worldwide. 
+            Today Lavie is a leading interactive entertainment company and provider of 3D engine technology. 
+            Lavie operates Fortnite, one of the world’s largest games with over 350 million accounts and 2.5 billion friend connections. 
+            Lavie also develops Unreal Engine, which powers the world’s leading games and is also adopted across industries such as film and television, architecture, automotive, manufacturing, and simulation. 
+            Through Unreal Engine, Lavie Studio Store, and Lavie Online Services, Lavie provides an end-to-end digital ecosystem for developers and creators to build, distribute, and operate games and other content. </p>
+                    <button>Read More...</button>
+                </div>
+            </div>
+        </section>
+     
+        <section class="team">
+            <h1>About Me</h1>
+            <div class="team-cards">
+                <!-- Cards here -->
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/ava.jpg" alt="User 1">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="card-name">Binh</h2>
+                        <p class="card-role">CEO and Founder</p>
+                        <p class="card-email">2251012015binh@ou.edu.vn</p>
+                        <p>
+                            <a href="https://www.facebook.com/profile.php?id=100013452278542" target="_blank">
+                                <button class="button">Contact</button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="info">
+               <a href="#" class="logo">Lavie Studio</a>
+               <p>
+                  <i class='bx bx-copyright'></i> 2023 All Rights Reserved
+               </p>
+               <ul>
+                  <li class="fb">
+                     <a href="#">
+                     <i class="fab fa-facebook-f icon"></i>
+                     </a>
+                  </li>
+                  <li class="twitter">
+                     <a href="#">
+                     <i class="fab fa-twitter icon"></i>
+                     </a>
+                  </li>
+                  <li class="linkedin">
+                     <a href="#">
+                     <i class="fab fa-linkedin-in icon"></i>
+                     </a>
+                  </li>
+                  <li class="gg">
+                     <a href="#">
+                     <i class="fab fa-google-plus-g icon"></i>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </footer>
+      </body>
+</html>

@@ -12,7 +12,6 @@ body {
      justify-content: center;
      height: 100vh;
      background-color: #feffdf;
-     color: black;
      box-sizing: border-box;
      min-height: 100vh;
      max-width:100%;
@@ -103,8 +102,6 @@ body {
      padding: 20px;
      margin-bottom: 20px;
      line-height: 200%;
-}
- #checkout-items p{
      color:black;
 }
  p {
@@ -194,11 +191,11 @@ body {
      background: rgba(255,255,255,0.1);
 }
  .dark-mode {
-     background-color: black;
+     background: #222831;
      color: white;
 }
  .theme-switch {
-     --toggle-size: 15px;
+     --toggle-size: 10px;
     /* the size is adjusted using font-size, this is not transform scale, so you can choose any size */
      --container-width: 5.625em;
      --container-height: 2.5em;
@@ -380,4 +377,15 @@ body {
      -ms-transform: translateY(-50%);
      transform: translateY(-50%);
 }
- 
+table {
+    margin-bottom: 20px;
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }

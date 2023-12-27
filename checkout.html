@@ -42,12 +42,21 @@
           <span class="title-word title-word-8">T</span>
         </h2>
       </div>
-      <div id="checkout-items">
+      <!-- Add a table to display game names and prices -->
+      <table>
+         <thead>
+         <tr>
+            <th>Game Name</th>
+            <th>Price</th>
+         </tr>
+         </thead>
+         <tbody id="checkout-items">
          <!-- Display the cart items here -->
-      </div>
+         </tbody>
+      </table>
       <p>Payment detail: <span id="checkout-total">0đ</span></p>
       <button>
-        <span>Buy now</span>
+        <a href="payment.html"><span>Buy now</span></a>
       </button> 
       <script>
          // Retrieve cart items from local storage
@@ -60,20 +69,21 @@
          
          // Clear previous items
          checkoutItemsContainer.innerHTML = '';
-         
-         // Populate cart items on the checkout page
+
+         // Populate cart items in the table on the checkout page
          if (storedCartItems.length === 0) {
-            // Cart is empty, display "Empty cart" message
-            const emptyCartMessage = document.createElement('p');
-            emptyCartMessage.textContent = 'Your cart is empty!';
-            checkoutItemsContainer.appendChild(emptyCartMessage);
+         // Cart is empty, display "Empty cart" message
+         const emptyCartMessage = document.createElement('p');
+         emptyCartMessage.textContent = 'Your cart is empty!';
+         checkoutItemsContainer.appendChild(emptyCartMessage);
          } else {
-            // Populate cart items on the checkout page
-            storedCartItems.forEach(item => {
-               const itemElement = document.createElement('p');
-               itemElement.textContent = `${item.itemName} (${item.quantity}) - ${item.price * item.quantity}đ`;
-               checkoutItemsContainer.appendChild(itemElement);
-            });
+         // Populate cart items in the table on the checkout page
+         const tableBody = document.getElementById('checkout-items');
+         storedCartItems.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${item.itemName}</td><td>${item.price * item.quantity}đ</td>`;
+            tableBody.appendChild(row);
+         });
          }
          
          // Update total price on the checkout page
