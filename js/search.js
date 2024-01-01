@@ -42,6 +42,9 @@ var productImageMap = {
    'Resident Evil 3 Remake':'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0cbb3719-1cbf-4b01-bba8-925b67cd892a/df15cgl-303c0351-bbac-490e-9f26-0b8244edadca.png/v1/fill/w_1280,h_1808,q_80,strp/resident_evil_3_remake_poster_by_jokerxax316_df15cgl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgwOCIsInBhdGgiOiJcL2ZcLzBjYmIzNzE5LTFjYmYtNGIwMS1iYmE4LTkyNWI2N2NkODkyYVwvZGYxNWNnbC0zMDNjMDM1MS1iYmFjLTQ5MGUtOWYyNi0wYjgyNDRlZGFkY2EucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.70kR-cGrbnGXgk2vjKPqAfTBWWsc9LKFfXtGejC9_XU',
    'Death Stranding':'https://i.ebayimg.com/images/g/QpoAAOSwxY9dgNqJ/s-l1200.webp',
 };
+var input = document.getElementById('searchbar');
+var selectedIndex = -1; // Variable to track the selected index
+
 // Your modified getImageUrl function
 function getImageUrl(productName) {
     // Check if the product name exists in the map
@@ -92,6 +95,61 @@ function showDropdown() {
       dropdown.style.display = 'none';
    }
 }
+
+// Add event listener for input field keydown event
+input.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowDown') {
+        // Handle down arrow key
+        selectedIndex = Math.min(selectedIndex + 1, dropdown.children.length - 1);
+        highlightSelected();
+        event.preventDefault(); // Prevent the default scrolling behavior
+    } else if (event.key === 'ArrowUp') {
+        // Handle up arrow key
+        selectedIndex = Math.max(selectedIndex - 1, -1);
+        highlightSelected();
+        event.preventDefault(); // Prevent the default scrolling behavior
+    } else if (event.key === 'Enter') {
+        var selectedLink = dropdown.children[selectedIndex];
+            input.value = selectedLink.textContent;
+            dropdown.style.display = 'none';
+
+            // Navigate to the item detail page
+            window.location.href = selectedLink.href;
+    }
+});
+
+// Add event listener for dropdown item click event
+dropdown.addEventListener('click', function (event) {
+    if (event.target.tagName === 'A') {
+        input.value = event.target.textContent;
+        dropdown.style.display = 'none';
+        
+        window.location.href = event.target.href;
+    }
+});
+
+// Function to highlight the selected item
+function highlightSelected() {
+    for (var i = 0; i < dropdown.children.length; i++) {
+        dropdown.children[i].classList.remove('selected');
+    }
+
+    if (selectedIndex !== -1) {
+        var selectedElement = dropdown.children[selectedIndex];
+        selectedElement.classList.add('selected');
+
+        // Check if the selected item is below the visible area
+        if (selectedElement.offsetTop + selectedElement.offsetHeight > dropdown.scrollTop + dropdown.clientHeight) {
+            dropdown.scrollTop = selectedElement.offsetTop + selectedElement.offsetHeight - dropdown.clientHeight;
+        }
+
+        // Check if the selected item is above the visible area
+        if (selectedElement.offsetTop < dropdown.scrollTop) {
+            dropdown.scrollTop = selectedElement.offsetTop;
+        }
+    }
+}
+
 
 console.log(Object.keys(productImageMap));
 console.log(searchResults);

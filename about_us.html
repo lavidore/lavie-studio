@@ -15,333 +15,333 @@
      box-sizing: border-box;
      font-family: 'Montserrat',"Poppins", sans-serif;
      scroll-behavior: smooth;
-}
- body {
-     background: #191919;
-     min-height: 100vh;
-     max-width:100%;
-     overflow-x: hidden;
-}
- header {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 78px;
-     padding: 7px 100px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     transition: 0.5s;
-     z-index: 1000;
-}
-/*scroll bar*/
- ::-webkit-scrollbar {
-     width: 12px;
-}
- ::-webkit-scrollbar-thumb {
-     background: #B6BBC4;
-     border-radius: 6px;
-}
- header {
-     background: #F0A500;
-     box-shadow: 0 5px 20px #182628;
-}
- header img {
-     position: relative;
-}
- header a img {
-     width: 100%;
-     height: 100%;
-     object-fit: contain;
-}
- header .nav {
-     display: flex;
-     justify-content: center;
-     align-items: center;
+        }
+        body {
+            background: #191919;
+            min-height: 100vh;
+            max-width:100%;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+            padding: 7px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.5s;
+            z-index: 1000;
+        }
+        /*scroll bar*/
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B6BBC4;
+            border-radius: 6px;
+        }
+        header {
+            background: #F0A500;
+            box-shadow: 0 5px 20px #182628;
+        }
+        header img {
+            position: relative;
+        }
+        header a img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        header .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-}
- header ul li {
-     list-style: none;
-     margin: 10px;
-}
- header ul li a {
-     color: #f2f2f2;
-     text-decoration: none;
-     padding: 10px 20px;
-     border-radius: 5px;
+        }
+        header ul li {
+            list-style: none;
+            margin: 10px;
+        }
+        header ul li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
 
-}
- header ul li a:hover {
-     background: #E45826;
-     color: #f2f2f2;
-     box-shadow: 0 0 10px #347474;
-}
- header .action .searchBx {
-     height:40px;
-     margin: 7px;
-     justify-content: center;
-     align-items: center;
-     background: #F0ECE5;
-     border-radius: 5px;
-     position: relative;
-    display: inline-block;
-}
- header .action .searchBx i {
-     font-size: 1.4em;
-     color: #182628;
-    margin:7px;
-}
- header .action .searchBx input {
-     outline: none;
-     border: none;
-     font-size: 1em;
-     color: #182628;
-     background: #F0ECE5;
-}
-/* About Section */
-.about {
-    padding: 100px 0 20px 0;
-    text-align: center;
-    
-}
- 
-.about h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color:#fff;
-
-}
- 
-.about p {
-    font-size: 1rem;
-    color: #323030;
-    max-width: 800px;
-    margin: 0 auto;
-    color:#fff;
-    text-align: center;
-
-}
- 
-.about-info {
-    margin: 2rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
- 
-.about-info p {
-    font-size: 1.3rem;
-    margin: 0 2rem;
-    text-align: justify;
-}
- 
-button {
-    border: none;
-    outline: 0;
-    padding: 10px;
-    margin: 2rem;
-    font-size: 1rem;
-    color: white;
-    background-color: #40b736;
-    text-align: center;
-    cursor: pointer;
-    width: 15rem;
-    border-radius: 4px;
-}
- 
-button:hover {
-    background-color: #1f9405;
-}
- 
-/* Team Section */
-.team {
-    padding: 30px 0;
-    text-align: center;
-    color:#fff;
-}
- 
-.team h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
- 
-.team-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
- 
-.card {
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-    width: 18rem;
-    height: auto;
-    margin-top: 10px;
-}
- 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-}
- 
-.card-img {
-    width: 18rem;
-    height: auto;
-}
- 
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
- 
-.card-info button {
-    margin: 2rem 1rem;
-}
- .card-info a{
-    text-decoration: none;
- }
-.card-name {
-    font-size: 2rem;
-    margin: 10px 0;
-    color:#182628;
-}
- 
-.card-role {
-    font-size: 1rem;
-    color: #888;
-    margin: 5px 0;
-}
- 
-.card-email {
-    font-size: 1rem;
-    color: #555;
-}
- 
-/* Footer */
-footer {
-     padding: 10px 100px;
-     margin-top: 50px;
-     text-align: center;
-}
- footer .info {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-}
- footer .info .logo {
-     color: #f2f2f2;
-     text-decoration: none;
-     font-size: 2em;
-     font-weight: 700;
-}
- footer .info p {
-     color: #f2f2f2;
-     margin: 0; /* Removes default margin on <p> element */
-    margin-left: 0; /* Aligns text to the left */}
- footer .info ul {
-    margin-bottom: 20px;
-  display: flex;
-  align-items: center; /* Center vertically */
-}
- footer .info ul li {
-     list-style: none;
-     height: 50px;
-     width: 50px;
-     margin: 5px;
-     border-radius: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border: 1px solid #3b945e;
-     max-width: 10em;
-     margin: 3px;
-     
-}
-:hover {
-         cursor: pointer;
-    }
- footer .info ul li:hover {
-     color: #f2f2f2;
-     box-shadow: 0 0 10px #347474;
-     border: none;
-}
- footer .info ul li a i {
-     font-size: 1.5em;
-     color: #f2f2f2;
-     justify-content: center;
-}
-footer .info ul .fb:hover{
-    background:#1877F2;
-}
-footer .info ul .twitter:hover{
-    background:#1DA1F2;
-}
-footer .info ul .linkedin:hover{
-    background:#0077b5;
-}
-footer .info ul .gg:hover{
-    background:#DB4437;
-}
- 
-@media (max-width: 768px) {
-    nav {
-        display: block;
-    }
- 
-    .logo {
-        text-align: center;
-    }
- 
-    .nav-links {
-        margin-top: 1rem;
-        justify-content: space-between;
-    }
- 
-    .nav-links li {
-        margin-right: 0;
-    }
- 
-    .about h1 {
-        font-size: 2rem;
-    }
- 
-    .about p {
-        font-size: 0.9rem;
-    }
- 
-    .about-info {
-        flex-direction: column;
-        text-align: center;
-    }
- 
-    .about-img {
-        width: 60%;
-        height: 60%;
-        margin-bottom: 1rem;
-    }
- 
-    .about-info p {
-        margin: 1rem 2rem;
-    }
- 
-    .about-info button {
-        margin: 1rem 2rem;
-        width: 10rem;
-    }
- 
-    .team {
-        margin: 0 1rem;
+        }
+        header ul li a:hover {
+            background: #E45826;
+            color: #f2f2f2;
+            box-shadow: 0 0 10px #347474;
+        }
+        header .action .searchBx {
+            height:40px;
+            margin: 7px;
+            justify-content: center;
+            align-items: center;
+            background: #F0ECE5;
+            border-radius: 5px;
+            position: relative;
+            display: inline-block;
+        }
+        header .action .searchBx i {
+            font-size: 1.4em;
+            color: #182628;
+            margin:7px;
+        }
+        header .action .searchBx input {
+            outline: none;
+            border: none;
+            font-size: 1em;
+            color: #182628;
+            background: #F0ECE5;
+        }
+        /* About Section */
+        .about {
+            padding: 100px 0 20px 0;
+            text-align: center;
+            
+        }
         
-    }
-}
+        .about h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color:#fff;
+
+        }
+        
+        .about p {
+            font-size: 1rem;
+            color: #323030;
+            max-width: 800px;
+            margin: 0 auto;
+            color:#fff;
+            text-align: center;
+
+        }
+        
+        .about-info {
+            margin: 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .about-info p {
+            font-size: 1.3rem;
+            margin: 0 2rem;
+            text-align: justify;
+        }
+        
+        button {
+            border: none;
+            outline: 0;
+            padding: 10px;
+            margin: 2rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #40b736;
+            text-align: center;
+            cursor: pointer;
+            width: 15rem;
+            border-radius: 4px;
+        }
+        
+        button:hover {
+            background-color: #1f9405;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 30px 0;
+            text-align: center;
+            color:#fff;
+        }
+        
+        .team h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 18rem;
+            height: auto;
+            margin-top: 10px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .card-img {
+            width: 18rem;
+            height: auto;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+        
+        .card-info button {
+            margin: 2rem 1rem;
+        }
+        .card-info a{
+            text-decoration: none;
+        }
+        .card-name {
+            font-size: 2rem;
+            margin: 10px 0;
+            color:#182628;
+        }
+        
+        .card-role {
+            font-size: 1rem;
+            color: #888;
+            margin: 5px 0;
+        }
+        
+        .card-email {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 10px 100px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        footer .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer .info .logo {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 2em;
+            font-weight: 700;
+        }
+        footer .info p {
+            color: #f2f2f2;
+            margin: 0; /* Removes default margin on <p> element */
+            margin-left: 0; /* Aligns text to the left */}
+        footer .info ul {
+            margin-bottom: 20px;
+        display: flex;
+        align-items: center; /* Center vertically */
+        }
+        footer .info ul li {
+            list-style: none;
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #3b945e;
+            max-width: 10em;
+            margin: 3px;
+            
+        }
+        :hover {
+                cursor: pointer;
+            }
+        footer .info ul li:hover {
+            color: #f2f2f2;
+            box-shadow: 0 0 10px #347474;
+            border: none;
+        }
+        footer .info ul li a i {
+            font-size: 1.5em;
+            color: #f2f2f2;
+            justify-content: center;
+        }
+        footer .info ul .fb:hover{
+            background:#1877F2;
+        }
+        footer .info ul .twitter:hover{
+            background:#1DA1F2;
+        }
+        footer .info ul .linkedin:hover{
+            background:#0077b5;
+        }
+        footer .info ul .gg:hover{
+            background:#DB4437;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: block;
+            }
+        
+            .logo {
+                text-align: center;
+            }
+        
+            .nav-links {
+                margin-top: 1rem;
+                justify-content: space-between;
+            }
+        
+            .nav-links li {
+                margin-right: 0;
+            }
+        
+            .about h1 {
+                font-size: 2rem;
+            }
+        
+            .about p {
+                font-size: 0.9rem;
+            }
+        
+            .about-info {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .about-img {
+                width: 60%;
+                height: 60%;
+                margin-bottom: 1rem;
+            }
+        
+            .about-info p {
+                margin: 1rem 2rem;
+            }
+        
+            .about-info button {
+                margin: 1rem 2rem;
+                width: 10rem;
+            }
+        
+            .team {
+                margin: 0 1rem;
+                
+            }
+        }
       </style>
    </head>
    <body >
@@ -352,19 +352,19 @@ footer .info ul .gg:hover{
          </a>
          <ul class="nav">
             <li>
-               <a href="https://lavidore.github.io/lavie-studio/#home">Home</a>
+               <a href="index.html">Home</a>
             </li>
             <li>
-               <a href="https://lavidore.github.io/lavie-studio/#browse">Browse</a>
+               <a href="#browse">Browse</a>
             </li>
             <li>
-               <a href="https://lavidore.github.io/lavie-studio/#tournament">Tournament</a>
+               <a href="#tournament">Tournament</a>
             </li>
             <li>
-               <a href="https://lavidore.github.io/lavie-studio/#contact">Contact</a>
+               <a href="#contact">Contact</a>
             </li>
             <li>
-               <a href="https://lavidore.github.io/lavie-studio/#about">About</a>
+               <a href="#about">About</a>
             </li>
          </ul>
       </header>
@@ -382,7 +382,7 @@ footer .info ul .gg:hover{
             Lavie operates Fortnite, one of the world’s largest games with over 350 million accounts and 2.5 billion friend connections. 
             Lavie also develops Unreal Engine, which powers the world’s leading games and is also adopted across industries such as film and television, architecture, automotive, manufacturing, and simulation. 
             Through Unreal Engine, Lavie Studio Store, and Lavie Online Services, Lavie provides an end-to-end digital ecosystem for developers and creators to build, distribute, and operate games and other content. </p>
-                </div>
+=                </div>
             </div>
         </section>
      

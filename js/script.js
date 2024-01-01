@@ -28,7 +28,7 @@
       }
     })
   }
-
+  
   /*to top button*/
   // Get the button:
   let mybutton = document.getElementById("myBtn");
@@ -77,11 +77,9 @@
   })
 
 // sort
-const select = document.querySelector('#select');
-const cards = document.querySelectorAll('.card');
+$('#select').change(function () {
+  const selectedOption = $(this).val();
 
-select.addEventListener('change', function() {
-  const selectedOption = select.value;
   if (selectedOption === 'default') {
     sortCardsByDefault();
   } else if (selectedOption === 'lowToHigh') {
@@ -96,40 +94,26 @@ select.addEventListener('change', function() {
 });
 
 function sortCardsByDefault() {
-  const cardBx = document.querySelector('.cardBx');
-  Array.from(cards).forEach(function(card) {
-    cardBx.appendChild(card);
-  });
+  $('.cardBx').append($('.card'));
 }
 
 function sortCardsByPrice(ascending) {
-  const sortedCards = Array.from(cards).sort(function(a, b) {
-    const priceA = parseFloat(a.querySelector('.info span:last-child').textContent);
-    const priceB = parseFloat(b.querySelector('.info span:last-child').textContent);
+  const sortedCards = $('.card').toArray().sort(function (a, b) {
+    const priceA = parseFloat($(a).find('.info span:last-child').text());
+    const priceB = parseFloat($(b).find('.info span:last-child').text());
     return ascending ? priceA - priceB : priceB - priceA;
   });
-  const cardBx = document.querySelector('.cardBx');
-  sortedCards.forEach(function(card) {
-    cardBx.appendChild(card);
-  });
+  $('.cardBx').append(sortedCards);
 }
 
 function sortCardsAlphabetically(ascending) {
-  const sortedCards = Array.from(cards).sort(function(a, b) {
-    const titleA = a.querySelector('h4').textContent.toUpperCase();
-    const titleB = b.querySelector('h4').textContent.toUpperCase();
+  const sortedCards = $('.card').toArray().sort(function (a, b) {
+    const titleA = $(a).find('h4').text().toUpperCase();
+    const titleB = $(b).find('h4').text().toUpperCase();
     return ascending ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
   });
-  const cardBx = document.querySelector('.cardBx');
-  sortedCards.forEach(function(card) {
-    cardBx.appendChild(card);
-  });
+  $('.cardBx').append(sortedCards);
 }
-// hover img
-$(".image-swap").hover( 
-  function () { $(this).addClass("hovered"); } ,
-  function () { $(this).removeClass("hovered"); }
-);
 
 // slideshow automatic and manual
 var slideIndex = 1;
@@ -217,3 +201,45 @@ function showPassword() {
     x.type = "password";
   }
 } 
+
+/* jQuery usage section */
+
+// hover img
+$(".image-swap").hover( 
+  function () { $(this).addClass("hovered"); } ,
+  function () { $(this).removeClass("hovered"); }
+);
+
+// smooth scrolling
+$(document).ready(function() {
+  // Smooth scrolling when clicking on links
+  $('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+
+    var target = this.hash;
+    var $target = $(target);
+
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top
+    }, 900, 'swing', function () {
+      window.location.hash = target;
+    });
+  });
+});
+
+// play video preview 
+function playVideo(button) {
+  var box = $(button).closest('.box');
+  var videoContainer = box.find('.video-container');
+  var videoFrame = box.find('.videoFrame');
+
+  videoContainer.show();
+  videoFrame.attr('src', videoFrame.attr('src') + '&autoplay=1');
+
+  videoContainer.click(function () {
+    stopVideo(videoContainer, videoFrame);
+  });
+}
+
+
+
