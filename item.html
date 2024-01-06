@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4087/4087900.png">
     <title>Product Details</title>
     <style>
         * {
@@ -27,6 +28,7 @@
         background: #191919;
         border-radius: 20px;
         overflow: hidden;
+        z-index: 2; /* Ensure the card is behind the popup */
         }
 
         .card::before {
@@ -115,19 +117,53 @@
         height: 300px;
         width: auto;
         }
+        /* Style for the popup */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 3; /* Ensure the popup is in front of the card */
+
+        }
+
+        /* Styles for the close button */
+        #popup button {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+    #popup img {
+        width:300px;
+      max-width: 100%;
+      height: auto;
+    }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="contentBox">
             <h1 id="itemName"></h1>
-            <a href="#" class="buy">Buy Now</a>
+            <a href="#" class="buy" onclick="showPopup()">Buy Now</a>
         </div>
         <div class="imgBox">
             <img id="itemImage" alt="Item Image">
         </div>
     </div>
-
+    <div id="popup">
+        <img src="img/bank.jpg" alt="Bank Image">
+        <button onclick="hidePopup()">Close</button>
+    </div>
     
 
     <script>
@@ -146,6 +182,12 @@
             if (!results) return null;
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
         }
     </script>
 </body>
